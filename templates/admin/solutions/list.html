@@ -1,0 +1,75 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+<div class="bg-white p-6 rounded-lg shadow mb-6">
+  <div class="flex justify-between items-center mb-4">
+    <h2 class="text-xl font-semibold">Solutions</h2>
+    <a href="{% url 'custom_admin:admin_solution_create' %}"
+       class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+      Add New
+    </a>
+  </div>
+
+  {% if solutions %}
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-white">
+        <thead>
+          <tr>
+            <th class="py-2 px-4 border-b">Title</th>
+            <th class="py-2 px-4 border-b">Industry</th>
+            <th class="py-2 px-4 border-b">Featured</th>
+            <th class="py-2 px-4 border-b">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for solution in solutions %}
+            <tr>
+              <td class="py-2 px-4 border-b">
+                <a href="{% url 'custom_admin:admin_solution_detail' solution.pk %}"
+                   class="text-blue-600 hover:text-blue-800">
+                  {{ solution.title }}
+                </a>
+              </td>
+              <td class="py-2 px-4 border-b">
+                {{ solution.get_industry_display }}
+              </td>
+              <td class="py-2 px-4 border-b">
+                {% if solution.featured %}
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Featured</span>
+                {% else %}
+                  <span class="text-gray-400 text-xs">—</span>
+                {% endif %}
+              </td>
+              <td class="py-2 px-4 border-b">
+                <a href="{% url 'custom_admin:admin_solution_detail' solution.pk %}"
+                   class="text-blue-600 hover:text-blue-800">View</a>
+                {# Uncomment when you add an edit route:
+                <a href="{% url 'custom_admin:admin_solution_edit' solution.pk %}"
+                   class="ml-2 text-yellow-600 hover:text-yellow-800">Edit</a>
+                #}
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    {% if is_paginated %}
+      <div class="mt-4 flex items-center gap-2">
+        {% if page_obj.has_previous %}
+          <a class="px-3 py-1 rounded border" href="?page={{ page_obj.previous_page_number }}">Prev</a>
+        {% endif %}
+        <span class="text-sm text-gray-600">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+        {% if page_obj.has_next %}
+          <a class="px-3 py-1 rounded border" href="?page={{ page_obj.next_page_number }}">Next</a>
+        {% endif %}
+      </div>
+    {% endif %}
+  {% else %}
+    <p class="text-gray-600">
+      No solutions yet.
+      <a href="{% url 'custom_admin:admin_solution_create' %}" class="text-blue-600 hover:text-blue-800">Create one</a>.
+    </p>
+  {% endif %}
+</div>
+{% endblock %}

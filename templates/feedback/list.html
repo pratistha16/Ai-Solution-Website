@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Feedback</title>
+</head>
+<body>
+    <h1>Customer Feedback</h1>
+    {% for feedback in feedbacks %}
+        <div>
+            <h3>{{ feedback.name }} from {{ feedback.company }}</h3>
+            <p>Rating: {{ feedback.rating }}/5</p>
+            <p>{{ feedback.feedback }}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>

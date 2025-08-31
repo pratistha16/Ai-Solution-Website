@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Our AI Solutions{% endblock %}
+
+{% block content %}
+
+<h1 class="text-4xl font-bold mb-8 text-center">Our AI Solutions</h1>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    {% for solution in solutions %}
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+
+        <!-- Solution Image -->
+        {% if solution.image %}
+        <img src="{{ solution.image.url }}" alt="{{ solution.title }}" class="w-full h-48 object-cover">
+        {% endif %}
+
+        <div class="p-4">
+            <!-- Title (clickable) -->
+            <h2 class="text-2xl font-semibold mb-2">
+                <a href="{% url 'solutions:solution_detail' solution.slug %}" class="text-blue-600 hover:underline">
+                    {{ solution.title }}
+                </a>
+            </h2>
+
+            <!-- Short Description -->
+            <p class="text-gray-700">{{ solution.description }}</p>
+        </div>
+
+    </div>
+    {% empty %}
+    <p class="text-gray-500 col-span-3 text-center">No solutions available yet.</p>
+    {% endfor %}
+
+</div>
+
+{% endblock %}

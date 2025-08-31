@@ -1,0 +1,47 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+<div class="bg-white p-6 rounded-lg shadow mb-6">
+  <h2 class="text-xl font-semibold mb-4">
+    {% if form.instance.pk %}Edit{% else %}Create{% endif %} Solution
+  </h2>
+
+  {% if form.non_field_errors %}
+    <div class="mb-4 p-3 rounded bg-red-50 text-red-700 text-sm">
+      {{ form.non_field_errors }}
+    </div>
+  {% endif %}
+
+  <form method="post" enctype="multipart/form-data" novalidate>
+    {% csrf_token %}
+
+    <div class="space-y-4">
+      {% for field in form %}
+        <div class="mb-4">
+          <label class="block text-gray-700 mb-2" for="{{ field.id_for_label }}">
+            {{ field.label }}{% if field.field.required %} <span class="text-red-500">*</span>{% endif %}
+          </label>
+          {{ field }}
+          {% if field.help_text %}
+            <p class="text-gray-500 text-xs mt-1">{{ field.help_text }}</p>
+          {% endif %}
+          {% for error in field.errors %}
+            <p class="text-red-500 text-xs mt-1">{{ error }}</p>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="mt-6">
+      <button type="submit"
+              class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+        Save
+      </button>
+      <a href="{% url 'custom_admin:admin_solutions' %}"
+         class="ml-2 bg-gray-300 px-4 py-2 rounded hover:bg-gray-400">
+        Cancel
+      </a>
+    </div>
+  </form>
+</div>
+{% endblock %}

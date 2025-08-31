@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Custom Admin{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-blue-800 text-white p-4">
+            <h1 class="text-2xl font-bold mb-6">Admin Panel</h1>
+            <nav>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="{% url 'custom_admin:admin_dashboard' %}"
+                           class="block py-2 px-4 hover:bg-blue-700 rounded">
+                           Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'custom_admin:admin_solutions' %}"
+                           class="block py-2 px-4 hover:bg-blue-700 rounded">
+                           Solutions
+                        </a>
+                    </li>
+                    <!-- Wire these up later when you add routes in custom_admin/urls.py -->
+                    <li><a href="#" class="block py-2 px-4 hover:bg-blue-700 rounded">Articles</a></li>
+                    <li><a href="#" class="block py-2 px-4 hover:bg-blue-700 rounded">Events</a></li>
+                    <li><a href="#" class="block py-2 px-4 hover:bg-blue-700 rounded">Contacts</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 flex flex-col">
+            <!-- Top bar -->
+            <header class="bg-white shadow px-6 py-3 flex items-center justify-between">
+                <div>
+                    {% block header %}{% endblock %}
+                </div>
+                <div>
+                    <a href="{% url 'custom_admin:admin_logout' %}"
+                       class="text-sm text-blue-700 hover:text-blue-900">
+                       Logout
+                    </a>
+                </div>
+            </header>
+
+            <!-- Flash messages -->
+            <section class="px-8 pt-4">
+                {% if messages %}
+                  <div class="space-y-2">
+                    {% for message in messages %}
+                      <div class="px-4 py-2 rounded
+                                  {% if message.tags == 'success' %} bg-green-100 text-green-800
+                                  {% elif message.tags == 'error' or message.tags == 'danger' %} bg-red-100 text-red-800
+                                  {% elif message.tags == 'warning' %} bg-yellow-100 text-yellow-800
+                                  {% else %} bg-gray-100 text-gray-800 {% endif %}">
+                        {{ message }}
+                      </div>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+            </section>
+
+            <!-- Page content -->
+            <section class="flex-1 p-8 overflow-auto">
+                {% block content %}{% endblock %}
+            </section>
+        </main>
+    </div>
+</body>
+</html>

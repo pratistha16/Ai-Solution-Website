@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+{% load i18n %}
+{% load humanize %}
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to Our AI Solutions Platform</h1>
+    <nav>
+        <a href="{% url 'solutions:solution_list' %}" class="text-blue-600 hover:underline">
+            Solutions
+        </a>
+        <br>
+        <a href="{% url 'feedback_list' %}" class="text-blue-600 hover:underline">Feedback</a>
+    </nav>
+</body>
+</html>

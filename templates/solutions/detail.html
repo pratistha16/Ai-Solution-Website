@@ -1,0 +1,71 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ solution.title }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 p-8">
+
+    <!-- Back link -->
+    <a href="{% url 'solutions:solution_list' %}" class="inline-block mb-6 text-blue-600 hover:underline">
+        &larr; Back to Solutions
+    </a>
+
+
+    <!-- Solution Card -->
+    <div class="bg-white shadow-lg rounded-lg p-6 max-w-4xl mx-auto">
+
+        <!-- Title -->
+        <h1 class="text-3xl font-bold mb-4">{{ solution.title }}</h1>
+
+        <!-- Industry and Featured -->
+        <div class="flex flex-wrap items-center space-x-4 mb-4">
+            <span class="text-gray-600 font-semibold">Industry:</span>
+            <span class="text-gray-800">{{ solution.industry }}</span>
+
+            {% if solution.featured %}
+            <span class="ml-4 bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm">Featured</span>
+            {% endif %}
+        </div>
+
+        <!-- Image -->
+        {% if solution.image %}
+        <img src="{{ solution.image.url }}" alt="{{ solution.title }}" class="w-full h-auto mb-4 rounded">
+        {% endif %}
+
+        <!-- Description -->
+        <div class="mb-4">
+            <h2 class="text-xl font-semibold mb-2">Description</h2>
+            <p class="text-gray-700">{{ solution.description }}</p>
+        </div>
+
+        <!-- Demo URL -->
+        {% if solution.demo_url %}
+        <div class="mb-4">
+            <h2 class="text-xl font-semibold mb-2">Demo</h2>
+            <a href="{{ solution.demo_url }}" target="_blank" class="text-blue-600 hover:underline">
+                View Demo
+            </a>
+        </div>
+        {% endif %}
+
+        <!-- Slug / URL -->
+        <div class="text-gray-500 text-sm mt-4">
+            URL Slug: <span class="font-mono">{{ solution.slug }}</span>
+        </div>
+
+        <!-- Created Date -->
+        <div class="text-gray-500 text-sm mt-2">
+            Created on: {{ solution.created_at|date:"F d, Y" }}
+        </div>
+
+    </div>
+
+</body>
+
+</html>
