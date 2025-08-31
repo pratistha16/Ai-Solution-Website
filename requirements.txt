@@ -1,0 +1,8 @@
+asgiref==3.7.2
+Django==5.2.5
+pytz==2025.7
+sqlparse==1.9.0
+django-tailwind==3.0.0
+django-crispy-forms==2.0.2
+Pillow==10.0.0
+django-ckeditor==6.4.2
