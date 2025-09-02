@@ -1,9 +1,11 @@
 from django.contrib import admin
 from .models import Article
-# Register your models here.
+
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ('title', 'author', 'is_published')
-    prepopulated_fields = {'slug': ('title',)}
-    list_filter = ('is_published',)
-    search_fields = ('title', 'content')
+    list_display = ("title", "status", "published_at", "featured")
+    list_filter = ("status", "featured", "published_at", "created_at")
+    search_fields = ("title", "author", "summary", "content")
+    prepopulated_fields = {"slug": ("title",)}
+    date_hierarchy = "published_at"
+    ordering = ("-published_at",)

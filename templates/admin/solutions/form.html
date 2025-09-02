@@ -12,6 +12,16 @@
     </div>
   {% endif %}
 
+  {# Optional: show current image when editing #}
+  {% if form.instance.pk and form.instance.image %}
+    <div class="bg-gray-50 border rounded p-3 mb-4">
+      <p class="text-sm text-gray-600 mb-2">Current image:</p>
+      <img src="{{ form.instance.image.url }}?v={{ form.instance.updated_at|date:'U' }}"
+           alt="{{ form.instance.title }}"
+           class="max-h-40 rounded">
+    </div>
+  {% endif %}
+
   <form method="post" enctype="multipart/form-data" novalidate>
     {% csrf_token %}
 
@@ -32,13 +42,25 @@
       {% endfor %}
     </div>
 
-    <div class="mt-6">
+    <div class="mt-6 flex flex-wrap gap-2">
       <button type="submit"
               class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
         Save
       </button>
-      <a href="{% url 'custom_admin:admin_solutions' %}"
-         class="ml-2 bg-gray-300 px-4 py-2 rounded hover:bg-gray-400">
+
+      {% if form.instance.pk %}
+        <a href="{% url 'custom_admin:solution_detail' form.instance.pk %}"
+           class="bg-gray-200 text-gray-800 px-4 py-2 rounded hover:bg-gray-300">
+          View
+        </a>
+        <a href="{% url 'custom_admin:solution_delete' form.instance.pk %}"
+           class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
+          Delete
+        </a>
+      {% endif %}
+
+      <a href="{% url 'custom_admin:solution_list' %}"
+         class="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400">
         Cancel
       </a>
     </div>

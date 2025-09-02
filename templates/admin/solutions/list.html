@@ -4,71 +4,90 @@
 <div class="bg-white p-6 rounded-lg shadow mb-6">
   <div class="flex justify-between items-center mb-4">
     <h2 class="text-xl font-semibold">Solutions</h2>
-    <a href="{% url 'custom_admin:admin_solution_create' %}"
+    <a href="{% url 'custom_admin:solution_create' %}"
        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
       Add New
     </a>
   </div>
 
   {% if solutions %}
-    <div class="overflow-x-auto">
-      <table class="min-w-full bg-white">
-        <thead>
-          <tr>
-            <th class="py-2 px-4 border-b">Title</th>
-            <th class="py-2 px-4 border-b">Industry</th>
-            <th class="py-2 px-4 border-b">Featured</th>
-            <th class="py-2 px-4 border-b">Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for solution in solutions %}
-            <tr>
-              <td class="py-2 px-4 border-b">
-                <a href="{% url 'custom_admin:admin_solution_detail' solution.pk %}"
-                   class="text-blue-600 hover:text-blue-800">
-                  {{ solution.title }}
-                </a>
-              </td>
-              <td class="py-2 px-4 border-b">
-                {{ solution.get_industry_display }}
-              </td>
-              <td class="py-2 px-4 border-b">
-                {% if solution.featured %}
-                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Featured</span>
-                {% else %}
-                  <span class="text-gray-400 text-xs">—</span>
-                {% endif %}
-              </td>
-              <td class="py-2 px-4 border-b">
-                <a href="{% url 'custom_admin:admin_solution_detail' solution.pk %}"
-                   class="text-blue-600 hover:text-blue-800">View</a>
-                {# Uncomment when you add an edit route:
-                <a href="{% url 'custom_admin:admin_solution_edit' solution.pk %}"
-                   class="ml-2 text-yellow-600 hover:text-yellow-800">Edit</a>
-                #}
-              </td>
-            </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </div>
+  <div class="overflow-x-auto">
+    <table class="min-w-full bg-white">
+      <thead>
+        <tr class="text-left">
+          <th class="py-2 px-4 border-b">Image</th>
+          <th class="py-2 px-4 border-b">Title</th>
+          <th class="py-2 px-4 border-b">Status</th>
+          <th class="py-2 px-4 border-b">Published</th>
+          <th class="py-2 px-4 border-b">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for solution in solutions %}
+        <tr class="align-top">
+          <td class="py-2 px-4 border-b">
+            {% if solution.image %}
+              <img src="{{ solution.image.url }}?v={{ solution.updated_at|date:'U' }}"
+                   alt="{{ solution.title }}"
+                   class="h-12 w-16 object-cover rounded">
+            {% else %}
+              <span class="text-gray-400 text-sm">—</span>
+            {% endif %}
+          </td>
 
-    {% if is_paginated %}
-      <div class="mt-4 flex items-center gap-2">
-        {% if page_obj.has_previous %}
-          <a class="px-3 py-1 rounded border" href="?page={{ page_obj.previous_page_number }}">Prev</a>
-        {% endif %}
-        <span class="text-sm text-gray-600">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
-        {% if page_obj.has_next %}
-          <a class="px-3 py-1 rounded border" href="?page={{ page_obj.next_page_number }}">Next</a>
-        {% endif %}
-      </div>
-    {% endif %}
+          <td class="py-2 px-4 border-b font-medium">
+            <a href="{% url 'custom_admin:solution_detail' solution.pk %}"
+               class="text-blue-600 hover:text-blue-800">
+              {{ solution.title }}
+            </a>
+            {% if solution.featured %}
+              <span class="ml-2 inline-block text-xs px-2 py-0.5 rounded bg-yellow-100 text-yellow-800 align-middle">Featured</span>
+            {% endif %}
+            {% if solution.demo_link %}
+              <a href="{{ solution.demo_link }}" target="_blank" rel="noopener"
+                 class="ml-2 text-xs underline text-indigo-700 hover:text-indigo-900 align-middle">
+                Demo ↗
+              </a>
+            {% endif %}
+          </td>
+
+          <td class="py-2 px-4 border-b">
+            {{ solution.status|title }}
+          </td>
+
+          <td class="py-2 px-4 border-b">
+            {% if solution.published_at %}{{ solution.published_at|date:"F d, Y" }}{% else %}—{% endif %}
+          </td>
+
+          <td class="py-2 px-4 border-b space-x-3">
+            <a href="{% url 'custom_admin:solution_detail' solution.pk %}"
+               class="text-blue-600 hover:text-blue-800">View</a>
+            <a href="{% url 'custom_admin:solution_edit' solution.pk %}"
+               class="text-yellow-600 hover:text-yellow-800">Edit</a>
+            <a href="{% url 'custom_admin:solution_delete' solution.pk %}"
+               class="text-red-600 hover:text-red-800">Delete</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  {% if is_paginated %}
+    <div class="mt-4 flex items-center gap-2">
+      {% if page_obj.has_previous %}
+        <a class="px-3 py-1 rounded border" href="?page={{ page_obj.previous_page_number }}">Prev</a>
+      {% endif %}
+      <span class="text-sm text-gray-600">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+      {% if page_obj.has_next %}
+        <a class="px-3 py-1 rounded border" href="?page={{ page_obj.next_page_number }}">Next</a>
+      {% endif %}
+    </div>
+  {% endif %}
   {% else %}
     <p class="text-gray-600">
       No solutions yet.
-      <a href="{% url 'custom_admin:admin_solution_create' %}" class="text-blue-600 hover:text-blue-800">Create one</a>.
+      <a href="{% url 'custom_admin:solution_create' %}" class="text-blue-600 hover:text-blue-800">Create one</a>.
     </p>
   {% endif %}
 </div>

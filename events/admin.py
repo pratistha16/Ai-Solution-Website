@@ -4,31 +4,21 @@ from .models import Event, GalleryImage
 class GalleryImageInline(admin.TabularInline):
     model = GalleryImage
     extra = 1
-    fields = ('image', 'caption', 'uploaded_at')
-    readonly_fields = ('uploaded_at',)
+    readonly_fields = ("created_at",)
 
 @admin.register(Event)
 class EventAdmin(admin.ModelAdmin):
-    list_display = ('title', 'date', 'location', 'is_active', 'created_at')
-    list_filter = ('is_active', 'date')
-    search_fields = ('title', 'description', 'location')
-    prepopulated_fields = {'slug': ('title',)}
+    list_display = ("title", "start_time", "status", "featured")
+    list_filter = ("status", "featured", "start_time", "published_at", "created_at")
+    search_fields = ("title", "location", "description")
+    prepopulated_fields = {"slug": ("title",)}
+    date_hierarchy = "start_time"
+    ordering = ("-start_time",)
     inlines = [GalleryImageInline]
-    fieldsets = (
-        (None, {
-            'fields': ('title', 'slug', 'description')
-        }),
-        ('Event Details', {
-            'fields': ('date', 'location', 'featured_image', 'registration_url')
-        }),
-        ('Status', {
-            'fields': ('is_active',)
-        }),
-    )
 
 @admin.register(GalleryImage)
 class GalleryImageAdmin(admin.ModelAdmin):
-    list_display = ('event', 'caption', 'uploaded_at')
-    list_filter = ('event', 'uploaded_at')
-    search_fields = ('caption', 'event__title')
-    readonly_fields = ('uploaded_at',)
+    list_display = ("event", "caption", "created_at")
+    list_filter = ("created_at", "event")
+    search_fields = ("caption", "event__title")
+    readonly_fields = ("created_at",)

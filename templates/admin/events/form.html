@@ -1,0 +1,144 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+<h2 class="text-2xl font-semibold mb-4">{{ title }}</h2>
+
+<form method="post" enctype="multipart/form-data" class="space-y-6 max-w-3xl">
+  {% csrf_token %}
+
+  {# Featured image preview (when editing) #}
+  {% if form.instance.pk and form.instance.featured_image %}
+    <div class="bg-gray-50 border rounded p-3">
+      <p class="text-sm text-gray-600 mb-2">Current featured image:</p>
+      <img
+        src="{{ form.instance.featured_image.url }}?v={{ form.instance.updated_at|date:'U' }}"
+        alt="{{ form.instance.title }}"
+        class="max-h-48 rounded"
+      >
+    </div>
+  {% endif %}
+
+  {# Event fields #}
+  {% for field in form %}
+    <div>
+      <label class="block font-medium text-gray-700 mb-1" for="{{ field.id_for_label }}">
+        {{ field.label }}{% if field.field.required %}<span class="text-red-500">*</span>{% endif %}
+      </label>
+      {{ field }}
+      {% if field.help_text %}
+        <p class="text-gray-500 text-xs mt-1">{{ field.help_text }}</p>
+      {% endif %}
+      {% for error in field.errors %}
+        <p class="text-red-500 text-xs mt-1">{{ error }}</p>
+      {% endfor %}
+    </div>
+  {% endfor %}
+
+  {# Gallery formset #}
+  <div class="bg-white border rounded p-4 space-y-3">
+    <div class="flex justify-between items-center">
+      <h3 class="text-lg font-semibold">Gallery</h3>
+      <button type="button" id="add-form-row"
+              class="text-sm bg-blue-600 text-white px-3 py-1.5 rounded hover:bg-blue-700">
+        + Add another
+      </button>
+    </div>
+
+    {{ formset.management_form }}
+
+    <div id="formset-rows" class="space-y-4">
+      {% for f in formset.forms %}
+        <div class="border rounded p-3 space-y-2 form-row">
+          {# preview if existing image #}
+          {% if f.instance.pk and f.instance.image %}
+            <img src="{{ f.instance.image.url }}?v={{ f.instance.created_at|date:'U' }}"
+                 alt="{{ f.instance.caption|default:'Image' }}"
+                 class="h-24 w-32 object-cover rounded">
+          {% endif %}
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1" for="{{ f.image.id_for_label }}">Image</label>
+            {{ f.image }}
+            {% for error in f.image.errors %}
+              <p class="text-red-500 text-xs mt-1">{{ error }}</p>
+            {% endfor %}
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1" for="{{ f.caption.id_for_label }}">Caption</label>
+            {{ f.caption }}
+            {% for error in f.caption.errors %}
+              <p class="text-red-500 text-xs mt-1">{{ error }}</p>
+            {% endfor %}
+          </div>
+
+          {% if formset.can_delete %}
+            <div class="flex items-center space-x-2">
+              {{ f.DELETE }} <label class="text-sm">Delete this image</label>
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+
+    {# empty template for JS cloning #}
+    <template id="empty-form-template">
+      <div class="border rounded p-3 space-y-2 form-row">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Image</label>
+          __IMAGE__
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Caption</label>
+          __CAPTION__
+        </div>
+        {% if formset.can_delete %}
+          <div class="flex items-center space-x-2">
+            __DELETE__ <label class="text-sm">Delete this image</label>
+          </div>
+        {% endif %}
+      </div>
+    </template>
+  </div>
+
+  <div class="pt-2">
+    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Save</button>
+    <a href="{% url 'custom_admin:admin_event_list' %}" class="ml-2 bg-gray-300 px-4 py-2 rounded hover:bg-gray-400">Cancel</a>
+  </div>
+</form>
+
+<script>
+(function() {
+  const addBtn = document.getElementById('add-form-row');
+  const rows = document.getElementById('formset-rows');
+  const totalForms = document.getElementById('{{ formset.management_form.TOTAL_FORMS.id_for_label }}') ||
+                     document.querySelector('input[name="{{ formset.management_form.TOTAL_FORMS.html_name }}"]');
+  const emptyTemplate = document.getElementById('empty-form-template').innerHTML;
+
+  // Build empty row from the formset "empty_form"
+  const emptyImage = `{{ formset.empty_form.image.as_widget|escapejs }}`;
+  const emptyCaption = `{{ formset.empty_form.caption.as_widget|escapejs }}`;
+  {% if formset.can_delete %}
+  const emptyDelete = `{{ formset.empty_form.DELETE.as_widget|escapejs }}`;
+  {% else %}
+  const emptyDelete = '';
+  {% endif %}
+
+  function addRow() {
+    const index = parseInt(totalForms.value, 10);
+    let html = emptyTemplate
+      .replace('__IMAGE__', emptyImage.replace(/__prefix__/g, index))
+      .replace('__CAPTION__', emptyCaption.replace(/__prefix__/g, index))
+      .replace('__DELETE__', emptyDelete ? emptyDelete.replace(/__prefix__/g, index) : '');
+
+    const wrapper = document.createElement('div');
+    wrapper.innerHTML = html.trim();
+    rows.appendChild(wrapper.firstChild);
+
+    totalForms.value = index + 1;
+  }
+
+  if (addBtn) addBtn.addEventListener('click', addRow);
+})();
+</script>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+<div class="bg-white p-6 rounded-lg shadow mb-6">
+  <div class="flex justify-between items-center mb-4">
+    <h2 class="text-xl font-semibold">Articles</h2>
+    <a href="{% url 'custom_admin:admin_article_create' %}"
+       class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Add New</a>
+  </div>
+
+  {% if articles %}
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-white">
+        <thead>
+          <tr class="text-left">
+            <th class="py-2 px-4 border-b">Image</th>
+            <th class="py-2 px-4 border-b">Title</th>
+            <th class="py-2 px-4 border-b">Status</th>
+            <th class="py-2 px-4 border-b">Published</th>
+            <th class="py-2 px-4 border-b">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for article in articles %}
+            <tr class="align-top">
+              <td class="py-2 px-4 border-b">
+                {% if article.featured_image %}
+                  <img src="{{ article.featured_image.url }}?v={{ article.updated_at|date:'U' }}"
+                       alt="{{ article.title }}" class="h-12 w-16 object-cover rounded">
+                {% else %}
+                  <span class="text-gray-400 text-sm">—</span>
+                {% endif %}
+              </td>
+              <td class="py-2 px-4 border-b font-medium">{{ article.title }}</td>
+              <td class="py-2 px-4 border-b">{{ article.status|title }}</td>
+              <td class="py-2 px-4 border-b">
+                {% if article.published_at %}{{ article.published_at|date:"M d, Y" }}{% else %}—{% endif %}
+              </td>
+              <td class="py-2 px-4 border-b space-x-3">
+                <a href="{% url 'custom_admin:admin_article_detail' article.pk %}" class="text-blue-600 hover:text-blue-800">View</a>
+                <a href="{% url 'custom_admin:admin_article_edit' article.pk %}" class="text-yellow-600 hover:text-yellow-800">Edit</a>
+                <a href="{% url 'custom_admin:admin_article_delete' article.pk %}" class="text-red-600 hover:text-red-800">Delete</a>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <p class="text-gray-600">No articles yet.
+      <a href="{% url 'custom_admin:admin_article_create' %}" class="text-blue-600 hover:text-blue-800">Add one</a>.
+    </p>
+  {% endif %}
+</div>
+{% endblock %}

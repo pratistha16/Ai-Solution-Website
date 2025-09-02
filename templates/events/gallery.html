@@ -1,13 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Event Gallery</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}Event Gallery{% endblock %}
+
+{% block content %}
     <h1>Event Gallery</h1>
     <div class="gallery">
         {% for image in images %}
         <div class="gallery-item">
+            <img src="{{ image.image.url }}" alt="{{ image.caption }}">
+            <p>{{ image.caption }}</p>
+            <p>From: {{ image.event.title }}</p>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
             <img src="{{ image.image.url }}" alt="{{ image.caption }}">
             <p>{{ image.caption }}</p>
             <p>From: {{ image.event.title }}</p>

@@ -1,0 +1,93 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+<div class="bg-white p-6 rounded-lg shadow mb-6 max-w-4xl mx-auto">
+  <!-- Header -->
+  <div class="flex justify-between items-center mb-4">
+    <h1 class="text-3xl font-bold">{{ event.title }}</h1>
+    <a href="{% url 'custom_admin:admin_event_list' %}"
+       class="bg-gray-300 text-gray-800 px-4 py-2 rounded hover:bg-gray-400">
+      Back to Events
+    </a>
+  </div>
+
+  <!-- Event Metadata -->
+  <div class="flex flex-wrap gap-x-8 gap-y-2 mb-6 text-gray-700">
+    <p><strong>Status:</strong> {{ event.status|title }}{% if event.featured %} • Featured{% endif %}</p>
+    {% if event.published_at %}
+      <p><strong>Published:</strong> {{ event.published_at|date:"F d, Y" }}</p>
+    {% endif %}
+    <p><strong>Starts:</strong> {{ event.start_time|date:"F d, Y · h:i A" }}</p>
+    {% if event.end_time %}
+      <p><strong>Ends:</strong> {{ event.end_time|date:"F d, Y · h:i A" }}</p>
+    {% endif %}
+    {% if event.location %}
+      <p><strong>Location:</strong> {{ event.location }}</p>
+    {% endif %}
+  </div>
+
+  <!-- Featured Image -->
+  {% if event.featured_image %}
+    <div class="mb-6">
+      <img
+        src="{{ event.featured_image.url }}?v={{ event.updated_at|date:'U' }}"
+        alt="{{ event.title }}"
+        class="w-full rounded"
+      >
+    </div>
+  {% endif %}
+
+  <!-- Description -->
+  {% if event.description %}
+    <div class="mb-6">
+      <h2 class="text-xl font-semibold mb-2">Description</h2>
+      <div class="text-gray-800 whitespace-pre-line">
+        {{ event.description }}
+      </div>
+    </div>
+  {% endif %}
+
+  <!-- Gallery -->
+  {% if event.gallery_images.all %}
+    {% if event.gallery_images.count %}
+      <div class="mb-6">
+        <h2 class="text-xl font-semibold mb-3">Gallery</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+          {% for img in event.gallery_images.all %}
+            <div class="space-y-1">
+              <img
+                src="{{ img.image.url }}?v={{ img.created_at|date:'U' }}"
+                alt="{{ img.caption|default:event.title }}"
+                class="rounded w-full h-40 object-cover"
+              >
+              {% if img.caption %}
+                <div class="text-xs text-gray-600">{{ img.caption }}</div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  {% endif %}
+
+  <!-- Slug -->
+  <div class="mb-4">
+    <h2 class="text-xl font-semibold mb-2">Slug</h2>
+    <p class="text-gray-700">{{ event.slug }}</p>
+  </div>
+
+  <!-- Actions -->
+  <div class="flex flex-wrap gap-3 mt-6">
+    <a href="{% url 'custom_admin:admin_event_edit' event.pk %}"
+       class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">
+      Edit
+    </a>
+    {# If you use a confirm page: #}
+    <a href="{% url 'custom_admin:admin_event_delete' event.pk %}"
+       class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
+      Delete
+    </a>
+    {# If you prefer inline POST delete instead, replace the link above with a form POST. #}
+  </div>
+</div>
+{% endblock %}

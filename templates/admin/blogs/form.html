@@ -1,0 +1,60 @@
+{% extends "admin/base.html" %}
+
+{% block content %}
+<div class="bg-white p-6 rounded-lg shadow mb-6 max-w-3xl mx-auto">
+  <h2 class="text-2xl font-semibold mb-6">{{ title }}</h2>
+
+  <form method="post" enctype="multipart/form-data" class="space-y-6">
+    {% csrf_token %}
+
+    <!-- Non-field errors -->
+    {% if form.non_field_errors %}
+      <div class="bg-red-50 text-red-600 border border-red-200 rounded p-4">
+        {{ form.non_field_errors }}
+      </div>
+    {% endif %}
+
+    <!-- Existing image preview (only if editing and image exists) -->
+    {% if form.instance.pk and form.instance.featured_image %}
+      <div class="bg-gray-50 border rounded p-3">
+        <p class="text-sm text-gray-600 mb-2">Current image:</p>
+        <img src="{{ form.instance.featured_image.url }}?v={{ form.instance.updated_at|date:'U' }}"
+             alt="{{ form.instance.title }}"
+             class="max-h-48 rounded">
+      </div>
+    {% endif %}
+
+    <!-- Render all fields -->
+    {% for field in form %}
+      <div>
+        <label for="{{ field.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-1">
+          {{ field.label }}
+          {% if field.field.required %}
+            <span class="text-red-500">*</span>
+          {% endif %}
+        </label>
+        <div class="mt-1">
+          {{ field }}
+        </div>
+        {% if field.help_text %}
+          <p class="text-xs text-gray-500 mt-1">{{ field.help_text }}</p>
+        {% endif %}
+        {% for error in field.errors %}
+          <p class="text-sm text-red-600 mt-1">{{ error }}</p>
+        {% endfor %}
+      </div>
+    {% endfor %}
+
+    <div class="flex justify-end space-x-3">
+      <a href="{% url 'custom_admin:admin_blog_list' %}"
+         class="px-4 py-2 rounded bg-gray-200 text-gray-700 hover:bg-gray-300">
+        Cancel
+      </a>
+      <button type="submit"
+              class="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700">
+        Save
+      </button>
+    </div>
+  </form>
+</div>
+{% endblock %}

@@ -1,32 +1,44 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Articles</title>
-</head>
-<body>
-    <h1>Articles List</h1>
-</body>
-</html>
-{% for article in articles %}
-    <div>
-        <h2><a href="{% url 'article_detail' article.slug %}">{{ article.title }}</a></h2>
-        <p>{{ article.summary|truncatewords:30 }}</p>
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}All Articles{% endblock %}
+
+{% block content %}
+<h1 class="text-4xl font-bold mb-8 text-center">Our Articles</h1>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {% for article in articles %}
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+
+        <!-- Featured Image -->
+        {% if article.featured_image %}
+        <img src="{{ article.featured_image.url }}" alt="{{ article.title }}" class="w-full h-48 object-cover">
+        {% endif %}
+
+        <div class="p-4">
+            <!-- Title (clickable to detail page) -->
+            <h2 class="text-2xl font-semibold mb-2">
+                <a href="{% url 'articles:article_detail' article.slug %}" class="text-blue-600 hover:underline">
+                    {{ article.title }}
+                </a>
+            </h2>
+
+            <!-- Author -->
+            <p class="text-gray-600 mb-2"><strong>Author:</strong> {{ article.author }}</p>
+
+            <!-- Short Content -->
+            <p class="text-gray-700 line-clamp-3">
+                {{ article.content|truncatechars:150 }}
+            </p>
+
+            <!-- Published date -->
+            <p class="text-gray-500 text-sm mt-2">
+                Published: {{ article.created_at|date:"F d, Y" }}
+            </p>
+        </div>
     </div>
-{% endfor %}
-
-{% if articles %}
-    <p>Total Articles: {{ articles|length }}</p>
-{% else %}
-    <p>No articles available.</p>
-{% endif %}
-
-{% if articles %}
-    <ul>
-        {% for article in articles %}
-            <li><a href="{% url 'article_detail' article.slug %}">{{ article.title }}</a></li>
-        {% endfor %}
-    </ul>
-{% else %}
-    <p>No articles found.</p>
-{% endif %}
-
+    {% empty %}
+    <p class="text-gray-500 col-span-3 text-center">No articles available yet.</p>
+    {% endfor %}
+</div>
+{% endblock %}

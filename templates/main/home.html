@@ -1,3 +1,4 @@
+{% extends "base.html" %}
 <!DOCTYPE html>
 <html>
 {% load static %}
@@ -8,12 +9,8 @@
 </head>
 <body>
     <h1>Welcome to Our AI Solutions Platform</h1>
-    <nav>
-        <a href="{% url 'solutions:solution_list' %}" class="text-blue-600 hover:underline">
-            Solutions
-        </a>
-        <br>
-        <a href="{% url 'feedback_list' %}" class="text-blue-600 hover:underline">Feedback</a>
-    </nav>
+    <p>Explore our solutions, read articles, and check out our blogs!</p>   
+    <p>We value your feedback! Please share your thoughts with us.</p>
+    <a href="{% url 'feedback:feedback_list' %}">Customer Feedback</a>
 </body>
 </html>

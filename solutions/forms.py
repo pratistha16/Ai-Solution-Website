@@ -4,16 +4,19 @@ from .models import SoftwareSolution
 class SoftwareSolutionForm(forms.ModelForm):
     class Meta:
         model = SoftwareSolution
-        fields = '__all__'  # Or specify fields you want to include: ['title', 'description', 'industry', etc.]
-        
-        # Optional: Add widgets for better form rendering
+        fields = [
+            "title",
+            "short_description",
+            "description",
+            "image",
+            "featured",
+            "status",
+            "published_at",
+            "demo_link",   # new
+        ]
+
         widgets = {
-            'description': forms.Textarea(attrs={'rows': 4}),
-            'industry': forms.Select(attrs={'class': 'form-control'}),
-        }
-        
-        # Optional: Add labels
-        labels = {
-            'title': 'Solution Title',
-            'description': 'Detailed Description',
+            "published_at": forms.DateTimeInput(attrs={"type": "datetime-local"}),
+            "short_description": forms.Textarea(attrs={"rows": 3}),
+            "description": forms.Textarea(attrs={"rows": 8}),
         }

@@ -12,5 +12,5 @@ def contact_view(request):
             return redirect('contact')
     else:
         form = ContactForm()
-    
-    return render(request, 'contact/form.html', {'form': form})
+
+    return render(request, 'contact/contact.html', {'form': form})

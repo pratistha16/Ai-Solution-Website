@@ -26,10 +26,13 @@
                         </a>
                     </li>
                     <!-- Wire these up later when you add routes in custom_admin/urls.py -->
-                    <li><a href="#" class="block py-2 px-4 hover:bg-blue-700 rounded">Articles</a></li>
-                    <li><a href="#" class="block py-2 px-4 hover:bg-blue-700 rounded">Events</a></li>
-                    <li><a href="#" class="block py-2 px-4 hover:bg-blue-700 rounded">Contacts</a></li>
+                    <li><a href="{% url 'custom_admin:admin_articles' %}" class="block py-2 px-4 hover:bg-blue-700 rounded">Articles</a></li>
+                    <li><a href="{% url 'custom_admin:admin_events' %}" class="block py-2 px-4 hover:bg-blue-700 rounded">Events</a></li>
+                    
+                    <li><a href="{% url 'custom_admin:admin_blogs' %}" class="block py-2 px-4 hover:bg-blue-700 rounded">Blogs</a></li>
+                   
                 </ul>
+
             </nav>
         </aside>
 

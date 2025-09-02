@@ -1,7 +1,10 @@
 # main/urls.py
 from django.urls import path
-from . import views  # This imports your views.py file
+from . import views
+
+app_name = "main"
 
 urlpatterns = [
-    path('', views.home, name='home'),  # This should match the function name
+    path("", views.home, name="home"),
+    # add other main-only routes here, e.g. "about/", "services/", etc.
 ]

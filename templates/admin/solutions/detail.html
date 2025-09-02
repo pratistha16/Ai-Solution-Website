@@ -1,15 +1,17 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>{{ solution.title }}</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 p-8">
 
     <!-- Back link -->
-    <a href="{% url 'custom_admin:admin_solutions' %}" class="inline-block mb-6 text-blue-600 hover:underline">
+    <a href="{% url 'custom_admin:solution_list' %}" 
+       class="inline-block mb-6 text-blue-600 hover:underline">
         &larr; Back to Solutions
     </a>
 
@@ -18,43 +20,51 @@
         <!-- Title -->
         <h1 class="text-3xl font-bold mb-4">{{ solution.title }}</h1>
 
-        <!-- Industry and Featured -->
-        <div class="flex items-center space-x-4 mb-4">
-            <span class="text-gray-600 font-semibold">Industry:</span>
-            <span class="text-gray-800">{{ solution.industry }}</span>
-
-            {% if solution.featured %}
-                <span class="ml-4 bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm">Featured</span>
-            {% endif %}
-        </div>
+        <!-- Featured badge -->
+        {% if solution.featured %}
+          <span class="mb-4 inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">
+            Featured
+          </span>
+        {% endif %}
 
         <!-- Image -->
         {% if solution.image %}
-            <img src="{{ solution.image.url }}" alt="{{ solution.title }}" class="w-full h-auto mb-4 rounded">
+          <img src="{{ solution.image.url }}?v={{ solution.updated_at|date:'U' }}" 
+               alt="{{ solution.title }}" 
+               class="w-full h-auto mb-6 rounded">
         {% endif %}
 
-        <!-- Description -->
-        <div class="mb-4">
+        <!-- Short description -->
+        {% if solution.short_description %}
+          <p class="text-gray-600 mb-4">{{ solution.short_description }}</p>
+        {% endif %}
+
+        <!-- Full description -->
+        <div class="mb-6">
             <h2 class="text-xl font-semibold mb-2">Description</h2>
-            <p class="text-gray-700">{{ solution.description }}</p>
+            <p class="text-gray-700 whitespace-pre-line">{{ solution.description }}</p>
         </div>
 
-        <!-- Demo URL -->
-        {% if solution.demo_url %}
-            <div class="mb-4">
-                <h2 class="text-xl font-semibold mb-2">Demo Link</h2>
-                <a href="{{ solution.demo_url }}" target="_blank" class="text-blue-600 hover:underline">
-                    View Demo
-                </a>
-            </div>
+        <!-- Demo link -->
+        {% if solution.demo_link %}
+          <div class="mb-6">
+              <h2 class="text-xl font-semibold mb-2">Demo</h2>
+              <a href="{{ solution.demo_link }}" target="_blank" rel="noopener"
+                 class="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                 View Demo
+              </a>
+          </div>
         {% endif %}
 
-        <!-- Created Date -->
-        <div class="text-gray-500 text-sm mt-4">
-            Created on: {{ solution.created_at|date:"F d, Y" }}
+        <!-- Metadata -->
+        <div class="text-gray-500 text-sm mt-4 space-y-1">
+            <p><strong>Status:</strong> {{ solution.status|title }}</p>
+            {% if solution.published_at %}
+              <p><strong>Published:</strong> {{ solution.published_at|date:"F d, Y" }}</p>
+            {% endif %}
+            <p><strong>Created on:</strong> {{ solution.created_at|date:"F d, Y" }}</p>
         </div>
     </div>
 
 </body>
 </html>
-<!DOCTYPE html>

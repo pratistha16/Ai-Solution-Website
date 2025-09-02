@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'feedback',
     'events.apps.EventsConfig',
     'contact.apps.ContactConfig',
+    'blogs.apps.BlogsConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -123,10 +125,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
-STATICFILES_DIRS = [BASE_DIR / 'static']  # For development
-STATIC_ROOT = BASE_DIR / 'staticfiles'    # For production
+STATIC_URL = "/static/"
+STATICFILES_DIRS = [BASE_DIR / "static"]
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
+
+# Hash-based cache busting
+STATICFILES_STORAGE = "django.contrib.staticfiles.storage.ManifestStaticFilesStorage"
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 

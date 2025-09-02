@@ -1,9 +1,35 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Article Detail</title>
-</head>
-<body>
-    <h1>Article Detail</h1>
-</body>
-</html>
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block content %}
+<a href="{% url 'articles:article_list' %}" class="inline-block mb-6 text-blue-600 hover:underline">
+    &larr; Back to Articles
+</a>
+
+<div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden p-6">
+
+    <!-- Title -->
+    <h1 class="text-4xl font-bold mb-4">{{ article.title }}</h1>
+
+    <!-- Author and Published -->
+    <p class="text-gray-600 mb-2"><strong>Author:</strong> {{ article.author }}</p>
+    <p class="text-gray-500 mb-4"><strong>Published on:</strong> {{ article.created_at|date:"F d, Y" }}</p>
+
+    <!-- Featured Image -->
+    {% if article.featured_image %}
+    <img src="{{ article.featured_image.url }}" alt="{{ article.title }}" class="w-full h-auto mb-4 rounded">
+    {% endif %}
+
+    <!-- Content -->
+    <div class="text-gray-700">
+        {{ article.content|linebreaks }}
+    </div>
+
+    <!-- Featured Badge -->
+    {% if article.is_published %}
+    <p class="mt-4 inline-block bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm">Published</p>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,22 +1,54 @@
-{% extends 'admin/base.html' %}
+{% extends "admin/base.html" %}
+
+{% load static %}
 
 {% block content %}
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-    <div class="bg-white p-6 rounded-lg shadow">
-        <h3 class="text-lg font-semibold mb-2">Solutions</h3>
-        <p class="text-3xl font-bold text-blue-600">{{ stats.solutions_count }}</p>
-    </div>
-    <div class="bg-white p-6 rounded-lg shadow">
-        <h3 class="text-lg font-semibold mb-2">Articles</h3>
-        <p class="text-3xl font-bold text-green-600">{{ stats.articles_count }}</p>
-    </div>
-    <div class="bg-white p-6 rounded-lg shadow">
-        <h3 class="text-lg font-semibold mb-2">Events</h3>
-        <p class="text-3xl font-bold text-purple-600">{{ stats.events_count }}</p>
-    </div>
-    <div class="bg-white p-6 rounded-lg shadow">
-        <h3 class="text-lg font-semibold mb-2">Contacts</h3>
-        <p class="text-3xl font-bold text-red-600">{{ stats.contacts_count }}</p>
-    </div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
+
+  <!-- Solutions -->
+  <div class="relative bg-white p-6 rounded-lg shadow hover:shadow-md transition">
+    <a href="{% url 'custom_admin:solution_list' %}"
+       class="absolute inset-0 z-20" aria-label="View all solutions"></a>
+    <h3 class="text-lg font-semibold mb-2 pointer-events-none">Solutions</h3>
+    <p class="text-3xl font-bold text-blue-600 pointer-events-none">{{ stats.solutions_count }}</p>
+    <div class="mt-3 text-sm text-gray-500 underline pointer-events-none">View all</div>
+  </div>
+
+  <!-- Articles -->
+  <div class="relative bg-white p-6 rounded-lg shadow hover:shadow-md transition">
+    <a href="{% url 'custom_admin:admin_article_list' %}"
+       class="absolute inset-0 z-20" aria-label="View all articles"></a>
+    <h3 class="text-lg font-semibold mb-2 pointer-events-none">Articles</h3>
+    <p class="text-3xl font-bold text-green-600 pointer-events-none">{{ stats.articles_count }}</p>
+    <div class="mt-3 text-sm text-gray-500 underline pointer-events-none">View all</div>
+  </div>
+
+  <!-- Blogs -->
+  <div class="relative bg-white p-6 rounded-lg shadow hover:shadow-md transition">
+    <a href="{% url 'custom_admin:admin_blog_list' %}"
+       class="absolute inset-0 z-20" aria-label="View all blogs"></a>
+    <h3 class="text-lg font-semibold mb-2 pointer-events-none">Blogs</h3>
+    <p class="text-3xl font-bold text-amber-600 pointer-events-none">{{ stats.blogs_count }}</p>
+    <div class="mt-3 text-sm text-gray-500 underline pointer-events-none">View all</div>
+  </div>
+
+  <!-- Events -->
+  <div class="relative bg-white p-6 rounded-lg shadow hover:shadow-md transition">
+    <a href="{% url 'custom_admin:admin_event_list' %}"
+       class="absolute inset-0 z-20" aria-label="View all events"></a>
+    <h3 class="text-lg font-semibold mb-2 pointer-events-none">Events</h3>
+    <p class="text-3xl font-bold text-purple-600 pointer-events-none">{{ stats.events_count }}</p>
+    <div class="mt-3 text-sm text-gray-500 underline pointer-events-none">View all</div>
+  </div>
+
+  <!-- Contacts (point to dashboard for now or add a contacts list route later) -->
+  <div class="relative bg-white p-6 rounded-lg shadow hover:shadow-md transition">
+    <a href="{% url 'custom_admin:dashboard' %}"
+       class="absolute inset-0 z-20" aria-label="View contacts"></a>
+    <h3 class="text-lg font-semibold mb-2 pointer-events-none">Contacts</h3>
+    <p class="text-3xl font-bold text-red-600 pointer-events-none">{{ stats.contacts_count }}</p>
+    <div class="mt-3 text-sm text-gray-500 underline pointer-events-none">View inbox</div>
+  </div>
+
 </div>
 {% endblock %}

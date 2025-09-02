@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>{{ event.title }}</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}{{ event.title }}{% endblock %}
+
+{% block content %}
     <h1>{{ event.title }}</h1>
     <p>Date: {{ event.date }}</p>
     <p>{{ event.description }}</p>
-</body>
+{% endblock %}
 </html>
