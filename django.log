@@ -1,0 +1,3126 @@
+Watching for file changes with StatReloader
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: core_project
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\core\views.py", line 25, in home
+    return render(request, 'index.html', context)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\defaulttags.py", line 198, in render
+    len_values = len(values)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: core_project
+"GET / HTTP/1.1" 500 211119
+C:\Users\LENOVO\Desktop\prathistha(pd)\src\ai_solutions\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\LENOVO\Desktop\prathistha(pd)\src\ai_solutions\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\LENOVO\Desktop\prathistha(pd)\src\ai_solutions\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\LENOVO\Desktop\prathistha(pd)\src\ai_solutions\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12810
+"GET /static/core/css/main.css HTTP/1.1" 200 6224
+"GET /static/core/js/main.js HTTP/1.1" 200 9435
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 200 160
+"GET /static/core/img/hero-ai.jpg HTTP/1.1" 200 98
+"GET /projects/retail-analytics-platform/ HTTP/1.1" 200 14165
+"GET /projects/ HTTP/1.1" 200 15704
+"GET /projects/retail-analytics-platform/ HTTP/1.1" 200 14165
+"GET /feedback/ HTTP/1.1" 200 11689
+"GET /articles/ HTTP/1.1" 200 8213
+"GET /contact/ HTTP/1.1" 200 20805
+"GET /static/core/img/office-map.jpg HTTP/1.1" 200 68
+"GET /events/ HTTP/1.1" 200 8429
+"GET /events/?type=CONFERENCE HTTP/1.1" 200 8544
+"GET /events/?type=WORKSHOP HTTP/1.1" 200 8542
+"GET /events/?type=CLIENT_DEMO HTTP/1.1" 200 8545
+"GET /about/ HTTP/1.1" 200 20690
+"GET /static/core/img/about-hero.jpg HTTP/1.1" 200 70
+"GET /static/core/img/team-cto.jpg HTTP/1.1" 200 70
+"GET /static/core/img/team-ceo.jpg HTTP/1.1" 200 70
+"GET /static/core/img/team-cpo.jpg HTTP/1.1" 200 70
+"GET /static/core/img/logo-client-3.png HTTP/1.1" 200 27
+"GET /static/core/img/logo-client-2.png HTTP/1.1" 200 27
+"GET /static/core/img/logo-client-4.png HTTP/1.1" 200 27
+"GET /static/core/img/logo-client-1.png HTTP/1.1" 200 62
+"GET /static/core/img/logo-client-5.png HTTP/1.1" 200 27
+"GET /contact/ HTTP/1.1" 200 20805
+"GET /admin HTTP/1.1" 301 0
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4167
+"GET /static/admin/css/login.css HTTP/1.1" 200 958
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2682
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+"GET /static/admin/css/base.css HTTP/1.1" 200 21544
+"GET /static/admin/css/responsive.css HTTP/1.1" 200 17905
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+"GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+"POST /admin/login/?next=/admin/ HTTP/1.1" 200 4328
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4167
+"GET / HTTP/1.1" 200 12810
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /static/core/img/hero-ai.jpg HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 304 0
+"GET /solutions/ HTTP/1.1" 200 15381
+"GET /solutions/computer-vision-pipelines/ HTTP/1.1" 200 17943
+"GET /projects/ HTTP/1.1" 200 15704
+"GET /projects/?tag=automation HTTP/1.1" 200 13767
+"GET /projects/?tag=computer-vision HTTP/1.1" 200 11758
+"GET /projects/?tag=data-analytics HTTP/1.1" 200 11901
+"GET /projects/?tag=healthcare HTTP/1.1" 200 11885
+"GET /projects/?tag=machine-learning HTTP/1.1" 200 11903
+"GET /projects/?tag=natural-language-processing HTTP/1.1" 200 11902
+"GET /projects/?tag=retail HTTP/1.1" 200 11893
+"GET /solutions/ HTTP/1.1" 200 15381
+"GET / HTTP/1.1" 200 12810
+"GET /solutions/ HTTP/1.1" 200 15381
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /projects/ HTTP/1.1" 200 15704
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 304 0
+"GET /projects/healthcare-chatbot/ HTTP/1.1" 200 14154
+"GET /projects/?year=2022 HTTP/1.1" 200 10218
+"GET /projects/?year= HTTP/1.1" 200 15704
+"GET /contact/ HTTP/1.1" 200 20805
+"GET /static/core/img/office-map.jpg HTTP/1.1" 304 0
+"GET /about/ HTTP/1.1" 200 20690
+"GET /static/core/img/team-ceo.jpg HTTP/1.1" 304 0
+"GET /static/core/img/about-hero.jpg HTTP/1.1" 304 0
+"GET /static/core/img/team-cto.jpg HTTP/1.1" 304 0
+"GET /static/core/img/team-cpo.jpg HTTP/1.1" 304 0
+"GET /projects/ HTTP/1.1" 200 15704
+"GET /solutions/ HTTP/1.1" 200 15381
+"GET /solutions/conversational-ai-assistants/ HTTP/1.1" 200 17962
+"GET /projects/retail-analytics-platform/ HTTP/1.1" 200 14165
+"GET / HTTP/1.1" 200 12810
+"GET /static/core/img/hero-ai.jpg HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 13551
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/img/hero-ai.jpg HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 304 0
+"GET /events/ HTTP/1.1" 200 9170
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /events/?type=CONFERENCE HTTP/1.1" 200 9285
+"GET /events/?type=WORKSHOP HTTP/1.1" 200 9283
+"GET /events/?type=CLIENT_DEMO HTTP/1.1" 200 9286
+"GET /articles/ HTTP/1.1" 200 8954
+"GET /contact/ HTTP/1.1" 200 21546
+"GET /static/core/img/office-map.jpg HTTP/1.1" 404 1929
+"GET / HTTP/1.1" 200 13551
+"GET /static/core/img/hero-ai.jpg HTTP/1.1" 404 1920
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 16122
+"GET / HTTP/1.1" 200 13150
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /static/core/img/image.png HTTP/1.1" 200 91596
+"GET / HTTP/1.1" 200 13220
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /static/core/img/image.png HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/retail-analytics-platform/ HTTP/1.1" 200 14906
+"GET /contact/ HTTP/1.1" 200 21546
+"GET /static/core/img/office-map.jpg HTTP/1.1" 404 1929
+"GET /projects/ HTTP/1.1" 200 16445
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/retail-analytics-platform/ HTTP/1.1" 200 14906
+"GET /solutions/ HTTP/1.1" 200 16122
+"GET /solutions/predictive-analytics-suite/ HTTP/1.1" 200 18763
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/retail-analytics-platform/ HTTP/1.1" 200 14906
+"GET /about/ HTTP/1.1" 200 21431
+"GET /static/core/img/team-cpo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/team-ceo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/about-hero.jpg HTTP/1.1" 404 1929
+"GET /static/core/img/team-cto.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/logo-client-1.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-3.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-2.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-4.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-5.png HTTP/1.1" 404 1938
+"GET /events/ HTTP/1.1" 200 9170
+"GET /contact/ HTTP/1.1" 200 21546
+"GET /static/core/img/office-map.jpg HTTP/1.1" 404 1929
+"GET / HTTP/1.1" 200 13220
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /static/core/img/image.png HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 16122
+"GET /projects/ HTTP/1.1" 200 16445
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 12430
+"GET /articles/ HTTP/1.1" 200 8954
+"GET /events/ HTTP/1.1" 200 9170
+"GET /articles/ HTTP/1.1" 200 8954
+"GET /events/ HTTP/1.1" 200 9170
+"GET /events/?type=CONFERENCE HTTP/1.1" 200 9285
+"GET /events/?type=WORKSHOP HTTP/1.1" 200 9283
+"GET /events/?type=CLIENT_DEMO HTTP/1.1" 200 9286
+"GET /about/ HTTP/1.1" 200 21431
+"GET /static/core/img/about-hero.jpg HTTP/1.1" 404 1929
+"GET /static/core/img/team-ceo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/team-cpo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/team-cto.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/logo-client-3.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-1.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-5.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-4.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-2.png HTTP/1.1" 404 1938
+"GET /contact/ HTTP/1.1" 200 21546
+"GET /static/core/img/office-map.jpg HTTP/1.1" 404 1929
+"GET /contact/ HTTP/1.1" 200 21361
+"GET /static/core/img/office-map.jpg HTTP/1.1" 404 1929
+"GET / HTTP/1.1" 200 13035
+"GET /static/core/img/image.png HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 14502
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/img/image.png HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 14502
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/retail-analytics-platform/ HTTP/1.1" 200 14721
+"GET /solutions/ HTTP/1.1" 200 15937
+"GET / HTTP/1.1" 200 13035
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 15937
+"GET /projects/ HTTP/1.1" 200 16260
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 13035
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/ HTTP/1.1" 200 16260
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/retail-analytics-platform/ HTTP/1.1" 200 14721
+"GET /feedback/ HTTP/1.1" 200 12245
+"GET /articles/ HTTP/1.1" 200 8769
+"GET /events/ HTTP/1.1" 200 8985
+"GET /about/ HTTP/1.1" 200 21246
+"GET /static/core/img/team-cpo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/team-ceo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/team-cto.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/about-hero.jpg HTTP/1.1" 404 1929
+"GET /static/core/img/logo-client-4.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-3.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-5.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-1.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-2.png HTTP/1.1" 404 1938
+"GET /contact/ HTTP/1.1" 200 21361
+"GET /static/core/img/office-map.jpg HTTP/1.1" 404 1929
+"GET / HTTP/1.1" 200 13035
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 15937
+"GET /solutions/predictive-analytics-suite/ HTTP/1.1" 200 18578
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 13035
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 15937
+"GET /solutions/conversational-ai-assistants/ HTTP/1.1" 200 18518
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/ HTTP/1.1" 200 16260
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/retail-analytics-platform/ HTTP/1.1" 200 14721
+"GET /articles/ HTTP/1.1" 200 8769
+"GET /events/ HTTP/1.1" 200 8985
+"GET /about/ HTTP/1.1" 200 21246
+"GET /static/core/img/about-hero.jpg HTTP/1.1" 404 1929
+"GET /static/core/img/team-cpo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/team-cto.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/team-ceo.jpg HTTP/1.1" 404 1923
+"GET /contact/ HTTP/1.1" 200 21361
+"GET /static/core/img/office-map.jpg HTTP/1.1" 404 1929
+"GET /about/ HTTP/1.1" 200 21246
+"GET /static/core/img/team-ceo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/team-cto.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/about-hero.jpg HTTP/1.1" 404 1929
+"GET /static/core/img/team-cpo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/logo-client-5.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-4.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-2.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-1.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-3.png HTTP/1.1" 404 1938
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 16411
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /static/core/img/image.png HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/ HTTP/1.1" 200 15720
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+Internal Server Error: /articles/the-future-of-ai-in-enterprise-2025-predictions/
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\core\views.py", line 170, in article_detail
+    return render(request, 'article_detail.html', context)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ~~~~~~~~~~~~^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 481, in parse
+    raise self.error(token, e)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 479, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 693, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 603, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'div'
+"GET /articles/the-future-of-ai-in-enterprise-2025-predictions/ HTTP/1.1" 500 241569
+"GET /events/ HTTP/1.1" 200 41578
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16355
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41578
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16355
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16355
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41578
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/machine-learning-workshop/ HTTP/1.1" 200 16307
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41578
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-ethics-workshop/ HTTP/1.1" 200 16267
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/ HTTP/1.1" 200 15720
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+Internal Server Error: /articles/mlops-best-practices-from-development-to-production/
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\core\views.py", line 170, in article_detail
+    return render(request, 'article_detail.html', context)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ~~~~~~~~~~~~^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 481, in parse
+    raise self.error(token, e)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 479, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 693, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 603, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'div'
+"GET /articles/mlops-best-practices-from-development-to-production/ HTTP/1.1" 500 241625
+Internal Server Error: /articles/mlops-best-practices-from-development-to-production/
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 502, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\core\views.py", line 170, in article_detail
+    return render(request, 'article_detail.html', context)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ~~~~~~~~~~~~^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\defaulttags.py", line 1499, in do_with
+    nodelist = parser.parse(("endwith",))
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 555, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 195: 'endblock', expected 'endwith'. Did you forget to register or load this tag?
+"GET /articles/mlops-best-practices-from-development-to-production/ HTTP/1.1" 500 208692
+Internal Server Error: /articles/mlops-best-practices-from-development-to-production/
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 502, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\core\views.py", line 170, in article_detail
+    return render(request, 'article_detail.html', context)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ~~~~~~~~~~~~^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\defaulttags.py", line 1499, in do_with
+    nodelist = parser.parse(("endwith",))
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 555, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 195: 'endblock', expected 'endwith'. Did you forget to register or load this tag?
+"GET /articles/mlops-best-practices-from-development-to-production/ HTTP/1.1" 500 208692
+Internal Server Error: /articles/mlops-best-practices-from-development-to-production/
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 502, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\core\views.py", line 170, in article_detail
+    return render(request, 'article_detail.html', context)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ~~~~~~~~~~~~^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\defaulttags.py", line 1499, in do_with
+    nodelist = parser.parse(("endwith",))
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 555, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 195: 'endblock', expected 'endwith'. Did you forget to register or load this tag?
+"GET /articles/mlops-best-practices-from-development-to-production/ HTTP/1.1" 500 208692
+Internal Server Error: /articles/mlops-best-practices-from-development-to-production/
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 502, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\core\views.py", line 170, in article_detail
+    return render(request, 'article_detail.html', context)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ~~~~~~~~~~~~^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\defaulttags.py", line 1499, in do_with
+    nodelist = parser.parse(("endwith",))
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 555, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 195: 'endblock', expected 'endwith'. Did you forget to register or load this tag?
+"GET /articles/mlops-best-practices-from-development-to-production/ HTTP/1.1" 500 208692
+Internal Server Error: /articles/mlops-best-practices-from-development-to-production/
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 502, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\core\views.py", line 170, in article_detail
+    return render(request, 'article_detail.html', context)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ~~~~~~~~~~~~^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\defaulttags.py", line 1499, in do_with
+    nodelist = parser.parse(("endwith",))
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 555, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 195: 'endblock', expected 'endwith'. Did you forget to register or load this tag?
+"GET /articles/mlops-best-practices-from-development-to-production/ HTTP/1.1" 500 208692
+"GET /articles/mlops-best-practices-from-development-to-production/ HTTP/1.1" 200 11999
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /articles/mlops-best-practices-from-development-to-production/ HTTP/1.1" 200 11999
+"GET /articles/mlops-best-practices-from-development-to-production/ HTTP/1.1" 200 11948
+"GET / HTTP/1.1" 200 16411
+"GET /static/core/img/image.png HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 15937
+"GET /projects/ HTTP/1.1" 200 20086
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 19221
+"GET /articles/ HTTP/1.1" 200 15720
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41578
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/nlp-conference-2025/ HTTP/1.1" 200 16299
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41578
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16355
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16411
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/ HTTP/1.1" 200 15720
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/the-future-of-ai-in-enterprise-2025-predictions/ HTTP/1.1" 200 12227
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 16411
+"GET /static/core/img/image.png HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4167
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"GET /static/admin/css/login.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 9138
+"GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+"GET /admin/core/article/add/ HTTP/1.1" 200 15838
+"GET /static/admin/css/forms.css HTTP/1.1" 200 9090
+"GET /static/admin/js/collapse.js HTTP/1.1" 200 1803
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+"GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+"GET /static/admin/css/widgets.css HTTP/1.1" 200 11800
+"GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+"GET /static/admin/js/core.js HTTP/1.1" 200 6208
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9042
+"GET /static/admin/js/actions.js HTTP/1.1" 200 8067
+"GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+"GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+"GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+"GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+"POST /admin/core/article/add/ HTTP/1.1" 200 16134
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/core/article/add/ HTTP/1.1" 302 0
+"GET /admin/core/article/ HTTP/1.1" 200 16120
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+"GET /static/admin/css/changelists.css HTTP/1.1" 200 6811
+"GET /static/admin/img/search.svg HTTP/1.1" 200 458
+"GET /static/admin/js/filters.js HTTP/1.1" 200 978
+"GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+"GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+"GET / HTTP/1.1" 200 16156
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/ HTTP/1.1" 200 17149
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/ai-powered/ HTTP/1.1" 200 10799
+"GET /admin/core/article/4/change/ HTTP/1.1" 200 16290
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/tooltag-arrowright.svg HTTP/1.1" 200 280
+"GET /admin/core/event/add/ HTTP/1.1" 200 22931
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/inlines.js HTTP/1.1" 200 15526
+"GET /static/admin/img/inline-delete.svg HTTP/1.1" 200 560
+"GET /admin/core/feedback/add/ HTTP/1.1" 200 13340
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/feedback/add/ HTTP/1.1" 200 13340
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"GET /admin/core/tag/add/ HTTP/1.1" 200 11044
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/core/tag/add/ HTTP/1.1" 302 0
+"GET /admin/core/tag/ HTTP/1.1" 200 14064
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/tag/5/change/ HTTP/1.1" 200 11295
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/core/tag/5/change/ HTTP/1.1" 302 0
+"GET /admin/core/tag/ HTTP/1.1" 200 14073
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /articles/ HTTP/1.1" 200 17149
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/ HTTP/1.1" 200 17149
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/ HTTP/1.1" 200 17149
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16156
+"GET /static/core/img/image.png HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 15937
+"GET /projects/ HTTP/1.1" 200 20086
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 19221
+"GET /articles/ HTTP/1.1" 200 17149
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41578
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/?type=CONFERENCE HTTP/1.1" 200 20925
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/?type=WORKSHOP HTTP/1.1" 200 20842
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41578
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /about/ HTTP/1.1" 200 21246
+"GET /static/core/img/about-hero.jpg HTTP/1.1" 404 1929
+"GET /static/core/img/team-ceo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/team-cpo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/team-cto.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/logo-client-5.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-1.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-3.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-2.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-4.png HTTP/1.1" 404 1938
+"GET /contact/ HTTP/1.1" 200 21361
+"GET /static/core/img/office-map.jpg HTTP/1.1" 404 1929
+"GET / HTTP/1.1" 200 16156
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 15937
+"GET /admin/core/tag/9/change/ HTTP/1.1" 200 11259
+"GET /static/admin/css/forms.css HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+"GET /static/admin/js/core.js HTTP/1.1" 304 0
+"GET /static/admin/js/actions.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+"GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+"GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+"GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+"GET /admin/core/tag/ HTTP/1.1" 200 13877
+"GET /admin/core/event/ HTTP/1.1" 200 17410
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/faq/ HTTP/1.1" 200 14703
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/feedback/ HTTP/1.1" 200 15185
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+"GET /admin/core/inquiry/ HTTP/1.1" 200 14400
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/project/ HTTP/1.1" 200 17165
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/project/ HTTP/1.1" 200 17165
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/solution/ HTTP/1.1" 200 14663
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/tag/ HTTP/1.1" 200 13877
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /solutions/ HTTP/1.1" 200 15937
+"GET /solutions/ HTTP/1.1" 200 15937
+"GET /projects/ HTTP/1.1" 200 20086
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 19221
+"GET /articles/ HTTP/1.1" 200 17149
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/ai-powered/ HTTP/1.1" 200 10799
+"GET /articles/ HTTP/1.1" 200 17149
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/ HTTP/1.1" 200 17149
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/ HTTP/1.1" 200 17149
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/ HTTP/1.1" 200 17149
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16156
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 15937
+"GET /projects/ HTTP/1.1" 200 20086
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 19221
+"GET /articles/ HTTP/1.1" 200 17149
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41578
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/computer-vision-demo/ HTTP/1.1" 200 16281
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16156
+"GET /static/core/img/image.png HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/ HTTP/1.1" 200 17149
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/mlops-best-practices-from-development-to-production/ HTTP/1.1" 200 11948
+"GET /articles/mlops-best-practices-from-development-to-production/ HTTP/1.1" 200 11903
+"GET /articles/mlops-best-practices-from-development-to-production/ HTTP/1.1" 200 11903
+Internal Server Error: /articles/mlops-best-practices-from-development-to-production/
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 502, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\core\views.py", line 170, in article_detail
+    return render(request, 'article_detail.html', context)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ~~~~~~~~~~~~^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\defaulttags.py", line 961, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 555, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 193: 'endblock', expected 'elif', 'else' or 'endif'. Did you forget to register or load this tag?
+"GET /articles/mlops-best-practices-from-development-to-production/ HTTP/1.1" 500 209754
+"GET /articles/mlops-best-practices-from-development-to-production/ HTTP/1.1" 200 11455
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /articles/mlops-best-practices-from-development-to-production/ HTTP/1.1" 200 11999
+"GET /articles/mlops-best-practices-from-development-to-production/ HTTP/1.1" 200 11999
+"GET /articles/mlops-best-practices-from-development-to-production/ HTTP/1.1" 200 11999
+"GET /articles/mlops-best-practices-from-development-to-production/ HTTP/1.1" 200 11999
+"GET /articles/mlops-best-practices-from-development-to-production/ HTTP/1.1" 200 11932
+"GET /articles/mlops-best-practices-from-development-to-production/ HTTP/1.1" 200 11973
+"GET /articles/mlops-best-practices-from-development-to-production/ HTTP/1.1" 200 11973
+"GET / HTTP/1.1" 200 16156
+"GET /static/core/img/image.png HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/ HTTP/1.1" 200 20086
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 19221
+"GET /articles/ HTTP/1.1" 200 17149
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /admin/core/article/ HTTP/1.1" 200 15918
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/admin/js/core.js HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+"GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+"GET /static/admin/js/actions.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+"GET /static/admin/img/search.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"GET /static/admin/js/filters.js HTTP/1.1" 304 0
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+"GET /admin/core/article/4/change/ HTTP/1.1" 200 16290
+"GET /static/admin/js/collapse.js HTTP/1.1" 304 0
+"GET /static/admin/css/forms.css HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+"GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+"GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+"GET /static/admin/img/tooltag-arrowright.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+"GET /articles/ HTTP/1.1" 200 17149
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/ HTTP/1.1" 200 17149
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"POST /admin/core/article/4/change/ HTTP/1.1" 302 0
+"GET /admin/core/article/ HTTP/1.1" 200 16122
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /articles/ HTTP/1.1" 200 17159
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /media/articles/covers/er_ai_solution_boxed.png HTTP/1.1" 200 348593
+"GET /admin/core/article/4/change/ HTTP/1.1" 200 16609
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/core/article/4/change/ HTTP/1.1" 302 0
+"GET /admin/core/article/ HTTP/1.1" 200 16122
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /articles/ HTTP/1.1" 200 17167
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /media/articles/covers/Screenshot_2025-08-03_180539.png HTTP/1.1" 200 41967
+"GET / HTTP/1.1" 200 16174
+"GET /media/articles/covers/Screenshot_2025-08-03_180539.png HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 15937
+"GET /solutions/ HTTP/1.1" 200 14467
+"GET /solutions/ HTTP/1.1" 200 14467
+"GET /solutions/ HTTP/1.1" 200 14467
+"GET /solutions/ HTTP/1.1" 200 14467
+"GET /solutions/ HTTP/1.1" 200 14467
+"GET /solutions/ HTTP/1.1" 200 14467
+"GET /solutions/ HTTP/1.1" 200 14467
+"GET /admin/core/tag/add/ HTTP/1.1" 200 11044
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/tag/ HTTP/1.1" 200 13877
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/tag/9/change/ HTTP/1.1" 200 11259
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/solution/ HTTP/1.1" 200 14663
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/solution/4/change/ HTTP/1.1" 200 16341
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/event/ HTTP/1.1" 200 17410
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/feedback/ HTTP/1.1" 200 15185
+"GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/inquiry/ HTTP/1.1" 200 14400
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/article/ HTTP/1.1" 200 15918
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/article/4/change/ HTTP/1.1" 200 16625
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/tag/ HTTP/1.1" 200 13877
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /solutions/ HTTP/1.1" 200 11797
+"GET /solutions/conversational-ai-assistants/ HTTP/1.1" 200 18518
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/ HTTP/1.1" 200 20086
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/ HTTP/1.1" 200 20086
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/ HTTP/1.1" 200 20086
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /admin/core/tag/9/change/ HTTP/1.1" 200 11259
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/tag/9/delete/ HTTP/1.1" 200 9358
+"GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+"POST /admin/core/tag/9/delete/ HTTP/1.1" 302 0
+"GET /admin/core/tag/ HTTP/1.1" 200 13749
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/solution/add/ HTTP/1.1" 200 15241
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/event/ HTTP/1.1" 200 17410
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/article/ HTTP/1.1" 200 15918
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/article/4/change/ HTTP/1.1" 200 16625
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/solution/ HTTP/1.1" 200 14663
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/project/ HTTP/1.1" 200 17107
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/project/1/change/ HTTP/1.1" 200 24388
+"GET /static/admin/js/inlines.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15492
+"GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+"GET /static/admin/img/inline-delete.svg HTTP/1.1" 304 0
+"GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+"GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+"GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655
+"GET /admin/core/project/ HTTP/1.1" 200 17107
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /projects/ HTTP/1.1" 200 17772
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/?tag=automation HTTP/1.1" 200 13503
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/?tag=computer-vision HTTP/1.1" 200 12086
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/? HTTP/1.1" 200 17772
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/?tag=data-analytics HTTP/1.1" 200 13534
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/?tag=finance HTTP/1.1" 200 12082
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/?tag=healthcare HTTP/1.1" 200 12052
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/?tag=machine-learning HTTP/1.1" 200 13539
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/?tag=natural-language-processing HTTP/1.1" 200 12069
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/?tag=retail HTTP/1.1" 200 12071
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/? HTTP/1.1" 200 17772
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 19221
+"GET /articles/ HTTP/1.1" 200 17167
+"GET /media/articles/covers/Screenshot_2025-08-03_180539.png HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41578
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /about/ HTTP/1.1" 200 21246
+"GET /static/core/img/team-ceo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/about-hero.jpg HTTP/1.1" 404 1929
+"GET /static/core/img/team-cto.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/team-cpo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/logo-client-4.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-2.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-5.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-3.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-1.png HTTP/1.1" 404 1938
+"GET /contact/ HTTP/1.1" 200 21361
+"GET /static/core/img/office-map.jpg HTTP/1.1" 404 1929
+"GET /admin/auth/user/ HTTP/1.1" 200 13292
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/js/actions.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+"GET /static/admin/js/core.js HTTP/1.1" 304 0
+"GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+"GET /static/admin/img/search.svg HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"GET /static/admin/js/filters.js HTTP/1.1" 304 0
+"GET /admin/core/tag/ HTTP/1.1" 200 13600
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /contact/ HTTP/1.1" 200 21361
+"GET /static/core/img/office-map.jpg HTTP/1.1" 404 1929
+"GET / HTTP/1.1" 200 16174
+"GET /media/articles/covers/Screenshot_2025-08-03_180539.png HTTP/1.1" 304 0
+"GET /static/core/img/image.png HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16164
+"GET /media/articles/covers/Screenshot_2025-08-03_180539.png HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16164
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 11797
+"GET / HTTP/1.1" 200 16164
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/the-future-of-ai-in-enterprise-2025-predictions/ HTTP/1.1" 200 12252
+"GET /articles/ HTTP/1.1" 200 17167
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /admin/core/article/ HTTP/1.1" 200 15918
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+"GET /admin/core/article/1/change/ HTTP/1.1" 200 17835
+"GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+"GET /static/admin/css/forms.css HTTP/1.1" 304 0
+"GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+"GET /static/admin/js/collapse.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+"GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+"GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/tooltag-arrowright.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+"POST /admin/core/article/1/change/ HTTP/1.1" 302 0
+"GET /admin/core/article/ HTTP/1.1" 200 16160
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /articles/the-future-of-ai-in-enterprise-2025-predictions/ HTTP/1.1" 200 12270
+"GET /articles/the-future-of-ai-in-enterprise-2025-predictions/ HTTP/1.1" 200 12270
+"GET /articles/the-future-of-ai-in-enterprise-2025-predictions/ HTTP/1.1" 200 12270
+"GET /articles/the-future-of-ai-in-enterprise-2025-predictions/ HTTP/1.1" 200 12270
+"GET /admin/core/article/1/change/ HTTP/1.1" 200 17853
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/core/article/1/change/ HTTP/1.1" 302 0
+"GET /admin/core/article/ HTTP/1.1" 200 16160
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /articles/ HTTP/1.1" 200 17167
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /media/articles/covers/Screenshot_2025-08-03_180539.png HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/the-future-of-ai-in-enterprise-2025-predictions/ HTTP/1.1" 200 14694
+"GET /articles/the-future-of-ai-in-enterprise-2025-predictions/ HTTP/1.1" 200 14142
+"GET /admin/core/article/1/change/ HTTP/1.1" 200 20272
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/core/article/1/change/ HTTP/1.1" 302 0
+"GET /admin/core/article/ HTTP/1.1" 200 16160
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /articles/the-future-of-ai-in-enterprise-2025-predictions/ HTTP/1.1" 200 14409
+"GET /media/articles/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 200 37240
+"GET /admin/core/event/ HTTP/1.1" 200 17410
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/event/1/change/ HTTP/1.1" 200 23668
+"GET /static/admin/js/inlines.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/inline-delete.svg HTTP/1.1" 304 0
+"POST /admin/core/event/1/change/ HTTP/1.1" 302 0
+"GET /admin/core/event/ HTTP/1.1" 200 17638
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /articles/ HTTP/1.1" 200 17188
+"GET /media/articles/covers/Screenshot_2025-08-03_180539.png HTTP/1.1" 304 0
+"GET /media/articles/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41820
+"GET /media/events/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 200 37240
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16600
+"GET /media/events/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 11797
+"GET / HTTP/1.1" 200 16185
+"GET /static/core/img/image.png HTTP/1.1" 304 0
+"GET /media/articles/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 19221
+"GET /projects/ HTTP/1.1" 200 17482
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/retail-analytics-platform/ HTTP/1.1" 200 14721
+"GET /projects/retail-analytics-platform/ HTTP/1.1" 200 14721
+Internal Server Error: /projects/retail-analytics-platform/
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\core\views.py", line 110, in project_detail
+    return render(request, 'project_detail.html', context)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ~~~~~~~~~~~~^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 515, in parse
+    self.unclosed_block_tag(parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\template\base.py", line 578, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 3: 'block'. Looking for one of: endblock.
+"GET /projects/retail-analytics-platform/ HTTP/1.1" 500 185419
+"GET /projects/retail-analytics-platform/ HTTP/1.1" 200 14604
+"GET /projects/retail-analytics-platform/ HTTP/1.1" 200 14721
+"GET /projects/retail-analytics-platform/ HTTP/1.1" 200 14700
+"GET /solutions/ HTTP/1.1" 200 11797
+"GET /solutions/conversational-ai-assistants/ HTTP/1.1" 200 18518
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16185
+"GET /media/articles/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 304 0
+"GET /media/articles/covers/Screenshot_2025-08-03_180539.png HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/ HTTP/1.1" 200 17482
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 19221
+"GET /articles/ HTTP/1.1" 200 17188
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41820
+"GET /media/events/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 34769
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /media/events/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 304 0
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16600
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16600
+"GET /media/events/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16600
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16598
+"GET /media/events/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16591
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16592
+"GET /media/events/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16592
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16592
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16592
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16597
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16592
+"GET /media/events/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16617
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16617
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16623
+"GET /media/events/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16623
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16623
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16623
+"GET /media/events/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 304 0
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41820
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /media/events/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /admin/core/event/1/change/ HTTP/1.1" 200 24005
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/admin/css/forms.css HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+"GET /static/admin/js/collapse.js HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+"GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+"GET /static/admin/js/core.js HTTP/1.1" 304 0
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+"GET /static/admin/js/inlines.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/actions.js HTTP/1.1" 304 0
+"GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+"GET /static/admin/img/tooltag-arrowright.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/inline-delete.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+"POST /admin/core/event/1/change/ HTTP/1.1" 302 0
+"GET /admin/core/event/ HTTP/1.1" 200 17638
+"GET /static/admin/img/search.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+"GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+"GET /static/admin/js/filters.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+"GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+"GET /events/ HTTP/1.1" 200 41808
+"GET /media/events/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/?type=CONFERENCE HTTP/1.1" 200 21163
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/?type=WORKSHOP HTTP/1.1" 200 20838
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/?type=CLIENT_DEMO HTTP/1.1" 200 20817
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /about/ HTTP/1.1" 200 21246
+"GET /static/core/img/team-ceo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/about-hero.jpg HTTP/1.1" 404 1929
+"GET /static/core/img/team-cto.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/team-cpo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/logo-client-2.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-1.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-4.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-5.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-3.png HTTP/1.1" 404 1938
+"GET /contact/ HTTP/1.1" 200 21361
+"GET /static/core/img/office-map.jpg HTTP/1.1" 404 1929
+"GET /contact/ HTTP/1.1" 200 21327
+"GET /static/core/img/office-map.jpg HTTP/1.1" 404 1929
+"GET / HTTP/1.1" 200 16185
+"GET /static/core/img/image.png HTTP/1.1" 304 0
+"GET /media/articles/covers/Screenshot_2025-08-03_180539.png HTTP/1.1" 304 0
+"GET /media/articles/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16183
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16179
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 11797
+"GET /projects/ HTTP/1.1" 200 17482
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 19221
+"GET /articles/ HTTP/1.1" 200 17188
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/ai-powered/ HTTP/1.1" 200 10498
+"GET /about/ HTTP/1.1" 200 21246
+"GET /static/core/img/about-hero.jpg HTTP/1.1" 404 1929
+"GET /static/core/img/team-ceo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/team-cto.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/team-cpo.jpg HTTP/1.1" 404 1923
+"GET /contact/ HTTP/1.1" 200 21327
+"GET /static/core/img/office-map.jpg HTTP/1.1" 404 1929
+"GET / HTTP/1.1" 200 16179
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41808
+"GET /media/events/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16623
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16617
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /contact/ HTTP/1.1" 200 21327
+"GET /static/core/img/office-map.jpg HTTP/1.1" 404 1929
+"GET / HTTP/1.1" 200 16179
+"GET /media/articles/covers/Screenshot_2025-08-03_180539.png HTTP/1.1" 304 0
+"GET /media/articles/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16179
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16179
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16179
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+Watching for file changes with StatReloader
+"GET /solutions/ HTTP/1.1" 200 11797
+"GET / HTTP/1.1" 200 16179
+"GET /static/core/css/main.css HTTP/1.1" 200 6224
+"GET /static/core/js/main.js HTTP/1.1" 200 9435
+Not Found: /django-admin/core/aboutus/
+"GET /django-admin/core/aboutus/?o=1 HTTP/1.1" 404 5298
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /static/core/img/image.png HTTP/1.1" 200 91596
+"GET /media/articles/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 200 37240
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 5249
+"GET /media/articles/covers/Screenshot_2025-08-03_180539.png HTTP/1.1" 200 41967
+"GET /solutions/ HTTP/1.1" 200 11797
+"GET /projects/ HTTP/1.1" 200 17482
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/?year=2024 HTTP/1.1" 200 10987
+"GET /projects/?year=2023 HTTP/1.1" 200 10987
+"GET /projects/?year=2022 HTTP/1.1" 200 10987
+"GET /projects/?year= HTTP/1.1" 200 17482
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 19221
+"GET /articles/ HTTP/1.1" 200 17188
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/ai-powered/ HTTP/1.1" 200 10498
+"GET /events/ HTTP/1.1" 200 41808
+"GET /media/events/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 200 37240
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16617
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /about/ HTTP/1.1" 200 21246
+"GET /static/core/img/about-hero.jpg HTTP/1.1" 404 1929
+"GET /static/core/img/team-cto.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/team-cpo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/team-ceo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/logo-client-2.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-4.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-3.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-1.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-5.png HTTP/1.1" 404 1938
+"GET /contact/ HTTP/1.1" 200 21327
+"GET /static/core/img/office-map.jpg HTTP/1.1" 404 1929
+"GET / HTTP/1.1" 200 16179
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 11797
+"GET /solutions/computer-vision-pipelines/ HTTP/1.1" 200 18499
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/computer-vision-pipelines/ HTTP/1.1" 200 18499
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 19221
+"GET /articles/ HTTP/1.1" 200 17188
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/the-future-of-ai-in-enterprise-2025-predictions/ HTTP/1.1" 200 14409
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16617
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16617
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /about/ HTTP/1.1" 200 21246
+"GET /static/core/img/about-hero.jpg HTTP/1.1" 404 1929
+"GET /static/core/img/team-cto.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/team-ceo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/team-cpo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/logo-client-4.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-1.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-2.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-3.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-5.png HTTP/1.1" 404 1938
+"GET /contact/ HTTP/1.1" 200 21327
+"GET /static/core/img/office-map.jpg HTTP/1.1" 404 1929
+"GET /feedback/ HTTP/1.1" 200 19221
+"GET /contact/ HTTP/1.1" 200 21327
+"GET /static/core/img/office-map.jpg HTTP/1.1" 404 1929
+"GET / HTTP/1.1" 200 16179
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/the-future-of-ai-in-enterprise-2025-predictions/ HTTP/1.1" 200 14409
+"GET /solutions/ HTTP/1.1" 200 11797
+"GET /projects/ HTTP/1.1" 200 17482
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 11797
+"GET /projects/ HTTP/1.1" 200 17482
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/?tag=automation HTTP/1.1" 200 13387
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/?tag=computer-vision HTTP/1.1" 200 12028
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/?tag=data-analytics HTTP/1.1" 200 13418
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/?tag=finance HTTP/1.1" 200 12024
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/?tag=healthcare HTTP/1.1" 200 11994
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/?tag=machine-learning HTTP/1.1" 200 13423
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/?tag=natural-language-processing HTTP/1.1" 200 12011
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/?tag=retail HTTP/1.1" 200 12013
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/? HTTP/1.1" 200 17482
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/retail-analytics-platform/ HTTP/1.1" 200 14700
+"GET /feedback/ HTTP/1.1" 200 19221
+"GET /articles/ HTTP/1.1" 200 17188
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/the-future-of-ai-in-enterprise-2025-predictions/ HTTP/1.1" 200 14409
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /about/ HTTP/1.1" 200 21246
+"GET /static/core/img/team-cto.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/about-hero.jpg HTTP/1.1" 404 1929
+"GET /static/core/img/team-ceo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/team-cpo.jpg HTTP/1.1" 404 1923
+"GET /contact/ HTTP/1.1" 200 21327
+"GET /static/core/img/office-map.jpg HTTP/1.1" 404 1929
+"GET / HTTP/1.1" 200 16179
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 19221
+"GET /articles/ HTTP/1.1" 200 17188
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/mlops-best-practices-from-development-to-production/ HTTP/1.1" 200 11421
+"GET /events/ HTTP/1.1" 200 41808
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41806
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41806
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41806
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41806
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41806
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 34757
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 34757
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 34757
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 34757
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 34757
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 34757
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 34757
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41806
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41806
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41806
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41807
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41807
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41807
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41807
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41807
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41807
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41805
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41805
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41805
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41805
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41906
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41917
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41917
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 41917
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/ HTTP/1.1" 200 17482
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/retail-analytics-platform/ HTTP/1.1" 200 14700
+"GET /projects/ HTTP/1.1" 200 17482
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 19221
+"GET /articles/ HTTP/1.1" 200 17188
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 35036
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/?type=CONFERENCE HTTP/1.1" 200 18772
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/?type=WORKSHOP HTTP/1.1" 200 18429
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/?type=CLIENT_DEMO HTTP/1.1" 200 18407
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /about/ HTTP/1.1" 200 21246
+"GET /static/core/img/team-ceo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/team-cto.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/about-hero.jpg HTTP/1.1" 404 1929
+"GET /static/core/img/team-cpo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/logo-client-3.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-2.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-1.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-5.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-4.png HTTP/1.1" 404 1938
+"GET / HTTP/1.1" 200 16179
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 19221
+"GET /feedback/ HTTP/1.1" 200 19213
+"GET /articles/ HTTP/1.1" 200 17180
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 35028
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16609
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 35016
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 11789
+"GET /solutions/computer-vision-pipelines/ HTTP/1.1" 200 18491
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/computer-vision-pipelines/ HTTP/1.1" 200 18485
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/computer-vision-pipelines/ HTTP/1.1" 200 18485
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/computer-vision-pipelines/ HTTP/1.1" 200 18485
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/computer-vision-pipelines/ HTTP/1.1" 200 18485
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/computer-vision-pipelines/ HTTP/1.1" 200 18485
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/computer-vision-pipelines/ HTTP/1.1" 200 18479
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/computer-vision-pipelines/ HTTP/1.1" 200 18473
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/conversational-ai-assistants/ HTTP/1.1" 200 18492
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/data-platform-dashboards/ HTTP/1.1" 200 18441
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/computer-vision-pipelines/ HTTP/1.1" 200 18473
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/predictive-analytics-suite/ HTTP/1.1" 200 18552
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/predictive-analytics-suite/ HTTP/1.1" 200 18552
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/data-platform-dashboards/ HTTP/1.1" 200 18441
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/recommendation-engines/ HTTP/1.1" 200 18468
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 19213
+"GET /articles/ HTTP/1.1" 200 17180
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 35016
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 34920
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 34920
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 34920
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 34920
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 34920
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 34920
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 35046
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 35046
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 35046
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 34869
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /about/ HTTP/1.1" 200 21238
+"GET /static/core/img/team-cto.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/about-hero.jpg HTTP/1.1" 404 1929
+"GET /static/core/img/team-ceo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/team-cpo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/logo-client-1.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-3.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-4.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-5.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-2.png HTTP/1.1" 404 1938
+"GET /contact/ HTTP/1.1" 200 21319
+"GET /static/core/img/office-map.jpg HTTP/1.1" 404 1929
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/img/image.png HTTP/1.1" 304 0
+"GET /media/articles/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 304 0
+"GET /media/articles/covers/Screenshot_2025-08-03_180539.png HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/healthcare-chatbot/ HTTP/1.1" 200 14681
+"GET /projects/retail-analytics-platform/ HTTP/1.1" 200 14692
+"GET /solutions/ HTTP/1.1" 200 11789
+"GET /projects/ HTTP/1.1" 200 17474
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 19213
+"GET /articles/ HTTP/1.1" 200 17180
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 34869
+"GET /media/events/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /about/ HTTP/1.1" 200 21238
+"GET /static/core/img/team-cto.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/about-hero.jpg HTTP/1.1" 404 1929
+"GET /static/core/img/team-cpo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/team-ceo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/logo-client-1.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-3.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-4.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-2.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-5.png HTTP/1.1" 404 1938
+"GET /solutions/ HTTP/1.1" 200 11789
+"GET /solutions/computer-vision-pipelines/ HTTP/1.1" 200 18473
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/image.png HTTP/1.1" 304 0
+"GET /media/articles/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 304 0
+"GET /media/articles/covers/Screenshot_2025-08-03_180539.png HTTP/1.1" 304 0
+"GET /solutions/ HTTP/1.1" 200 35052
+"GET /solutions/ HTTP/1.1" 200 35052
+"GET /solutions/ HTTP/1.1" 200 35052
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4167
+"GET /static/admin/css/login.css HTTP/1.1" 304 0
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 12780
+"GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+"GET /admin/core/solution/ HTTP/1.1" 200 14663
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/solution/4/change/ HTTP/1.1" 200 16341
+"GET /static/admin/js/collapse.js HTTP/1.1" 304 0
+"GET /static/admin/css/forms.css HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+"GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+"GET /static/admin/img/tooltag-arrowright.svg HTTP/1.1" 304 0
+"GET /admin/core/solution/4/change/ HTTP/1.1" 200 16341
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/solution/4/change/ HTTP/1.1" 200 16341
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 16171
+"GET /solutions/ HTTP/1.1" 200 35052
+"GET /solutions/computer-vision-pipelines/ HTTP/1.1" 200 18473
+C:\Users\LENOVO\Desktop\prathistha(pd)\src\core\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /solutions/
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\core\views.py", line 66, in solutions_list
+    categories = Solution.CATEGORY_CHOICES
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'Solution' has no attribute 'CATEGORY_CHOICES'
+"GET /solutions/ HTTP/1.1" 500 73648
+Internal Server Error: /solutions/
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\core\views.py", line 66, in solutions_list
+    categories = Solution.CATEGORY_CHOICES
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'Solution' has no attribute 'CATEGORY_CHOICES'
+"GET /solutions/ HTTP/1.1" 500 73648
+Internal Server Error: /solutions/
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\core\views.py", line 66, in solutions_list
+    categories = Solution.CATEGORY_CHOICES
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'Solution' has no attribute 'CATEGORY_CHOICES'
+"GET /solutions/ HTTP/1.1" 500 73648
+Internal Server Error: /solutions/
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\LENOVO\Desktop\prathistha(pd)\src\core\views.py", line 66, in solutions_list
+    categories = Solution.CATEGORY_CHOICES
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'Solution' has no attribute 'CATEGORY_CHOICES'
+"GET /solutions/ HTTP/1.1" 500 73511
+C:\Users\LENOVO\Desktop\prathistha(pd)\src\core\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 16171
+"GET /solutions/ HTTP/1.1" 200 35052
+C:\Users\LENOVO\Desktop\prathistha(pd)\src\core\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\LENOVO\Desktop\prathistha(pd)\src\core\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /media/articles/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 304 0
+"GET /static/core/img/image.png HTTP/1.1" 304 0
+"GET /media/articles/covers/Screenshot_2025-08-03_180539.png HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 35702
+"GET /projects/ HTTP/1.1" 200 17474
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 35702
+"GET /solutions/computer-vision-pipelines/ HTTP/1.1" 200 18473
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 35702
+"GET /solutions/ HTTP/1.1" 200 35702
+"GET /solutions/ HTTP/1.1" 200 35702
+"GET /solutions/ HTTP/1.1" 200 35702
+"GET /solutions/ HTTP/1.1" 200 35702
+"GET /solutions/ HTTP/1.1" 200 35702
+"GET /solutions/ HTTP/1.1" 200 35702
+"GET /solutions/ HTTP/1.1" 200 35702
+"GET /articles/ HTTP/1.1" 200 17180
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/the-future-of-ai-in-enterprise-2025-predictions/ HTTP/1.1" 200 14401
+"GET /events/ HTTP/1.1" 200 34869
+"GET /media/events/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16609
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /about/ HTTP/1.1" 200 21238
+"GET /static/core/img/about-hero.jpg HTTP/1.1" 404 1929
+"GET /static/core/img/team-cto.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/team-ceo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/team-cpo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/logo-client-1.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-3.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-2.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-4.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-5.png HTTP/1.1" 404 1938
+"GET /contact/ HTTP/1.1" 200 21319
+"GET /static/core/img/office-map.jpg HTTP/1.1" 404 1929
+"POST /contact/ HTTP/1.1" 200 21627
+"GET /static/core/img/office-map.jpg HTTP/1.1" 404 1929
+"POST /contact/ HTTP/1.1" 302 0
+"GET /contact/ HTTP/1.1" 200 21687
+"GET /static/core/img/office-map.jpg HTTP/1.1" 404 1929
+"GET /solutions/ HTTP/1.1" 200 35702
+C:\Users\LENOVO\Desktop\prathistha(pd)\src\core\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\LENOVO\Desktop\prathistha(pd)\src\core\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\LENOVO\Desktop\prathistha(pd)\src\core\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\LENOVO\Desktop\prathistha(pd)\src\core\models.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 35232
+"GET /solutions/ HTTP/1.1" 200 35232
+"GET /solutions/ HTTP/1.1" 200 35232
+"GET /solutions/ HTTP/1.1" 200 35232
+"GET /solutions/computer-vision-pipelines/ HTTP/1.1" 200 18473
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+C:\Users\LENOVO\Desktop\prathistha(pd)\src\core\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\LENOVO\Desktop\prathistha(pd)\src\core\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /solutions/ HTTP/1.1" 200 35702
+"GET /solutions/ HTTP/1.1" 200 35702
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 35702
+"GET /solutions/computer-vision-pipelines/ HTTP/1.1" 200 18473
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/computer-vision-pipelines/ HTTP/1.1" 200 18473
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4167
+"GET /static/admin/css/login.css HTTP/1.1" 304 0
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 12780
+"GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+"GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 35702
+"GET /admin/ HTTP/1.1" 200 12780
+"GET /admin/core/solution/ HTTP/1.1" 200 19280
+"GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+"GET /static/admin/js/core.js HTTP/1.1" 304 0
+"GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+"GET /static/admin/js/actions.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+"GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+"GET /static/admin/img/search.svg HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+"GET /static/admin/js/filters.js HTTP/1.1" 304 0
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+"GET /admin/core/solution/4/change/ HTTP/1.1" 200 22876
+"GET /static/admin/css/forms.css HTTP/1.1" 304 0
+"GET /static/admin/js/collapse.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+"GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+"GET /static/admin/img/tooltag-arrowright.svg HTTP/1.1" 304 0
+"POST /admin/core/solution/4/change/ HTTP/1.1" 302 0
+"GET /admin/core/solution/ HTTP/1.1" 200 19598
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /solutions/ HTTP/1.1" 200 36239
+"GET /solutions/ HTTP/1.1" 200 36239
+"GET /solutions/ HTTP/1.1" 200 36239
+"GET /solutions/ HTTP/1.1" 200 36239
+"GET /solutions/ HTTP/1.1" 200 36239
+"GET /solutions/ HTTP/1.1" 200 36239
+"GET /solutions/ HTTP/1.1" 200 36239
+"GET /solutions/ HTTP/1.1" 200 36239
+"GET /solutions/ HTTP/1.1" 200 36239
+"GET /contact/ HTTP/1.1" 200 21319
+"GET /static/core/img/office-map.jpg HTTP/1.1" 404 1929
+"GET /events/ HTTP/1.1" 200 34869
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/mlops-best-practices-from-development-to-production/ HTTP/1.1" 200 11413
+"GET /solutions/ HTTP/1.1" 200 36239
+"GET /solutions/ HTTP/1.1" 200 36239
+"GET /solutions/ HTTP/1.1" 200 36239
+"GET /solutions/ HTTP/1.1" 200 36239
+"GET /solutions/ HTTP/1.1" 200 36239
+"GET /solutions/ HTTP/1.1" 200 36239
+"GET /solutions/ HTTP/1.1" 200 36227
+"GET /solutions/ HTTP/1.1" 200 36227
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET /solutions/computer-vision-pipelines/ HTTP/1.1" 200 18483
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET /projects/ HTTP/1.1" 200 17474
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/ HTTP/1.1" 200 17474
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 19213
+"GET /articles/ HTTP/1.1" 200 17180
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 34869
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /about/ HTTP/1.1" 200 21238
+"GET /static/core/img/team-cto.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/about-hero.jpg HTTP/1.1" 404 1929
+"GET /static/core/img/team-ceo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/team-cpo.jpg HTTP/1.1" 404 1923
+"GET /contact/ HTTP/1.1" 200 21319
+"GET /static/core/img/office-map.jpg HTTP/1.1" 404 1929
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET /projects/ HTTP/1.1" 200 17474
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 19213
+"GET /articles/ HTTP/1.1" 200 17180
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/ HTTP/1.1" 200 17180
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 34869
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 34869
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 34869
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/ HTTP/1.1" 200 17180
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/the-future-of-ai-in-enterprise-2025-predictions/ HTTP/1.1" 200 14401
+"GET /events/ HTTP/1.1" 200 34869
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ai-innovation-summit-2025/ HTTP/1.1" 200 16609
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /about/ HTTP/1.1" 200 21238
+"GET /static/core/img/about-hero.jpg HTTP/1.1" 404 1929
+"GET /static/core/img/team-ceo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/team-cto.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/team-cpo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/logo-client-1.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-2.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-5.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-3.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-4.png HTTP/1.1" 404 1938
+"GET /contact/ HTTP/1.1" 200 21319
+"GET /static/core/img/office-map.jpg HTTP/1.1" 404 1929
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /admin/ HTTP/1.1" 200 12817
+"GET /admin/auth/user/ HTTP/1.1" 200 13660
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/auth/group/ HTTP/1.1" 200 11325
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/auth/group/1/change/ HTTP/1.1" 200 17089
+"GET /static/admin/js/SelectBox.js HTTP/1.1" 304 0
+"GET /static/admin/js/SelectFilter2.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/icon-unknown.svg HTTP/1.1" 304 0
+"GET /static/admin/img/selector-icons.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 304 0
+"GET /admin/core/event/ HTTP/1.1" 200 17410
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/feedback/ HTTP/1.1" 200 15185
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/inquiry/ HTTP/1.1" 200 14956
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/project/ HTTP/1.1" 200 17107
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/solution/ HTTP/1.1" 200 19377
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/tag/ HTTP/1.1" 200 13600
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/article/ HTTP/1.1" 200 15918
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /static/core/css/main.css HTTP/1.1" 200 6224
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET /projects/ HTTP/1.1" 200 17474
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/css/main.css HTTP/1.1" 200 6224
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/css/main.css HTTP/1.1" 200 6224
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/css/main.css HTTP/1.1" 200 6224
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/css/main.css HTTP/1.1" 200 6224
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /projects/ HTTP/1.1" 200 17474
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 19213
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /about/ HTTP/1.1" 200 21270
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/img/about-hero.jpg HTTP/1.1" 404 1929
+"GET /static/core/img/team-cto.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/team-cpo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/pratisthaCEO.jpg HTTP/1.1" 200 106469
+"GET /static/core/img/logo-client-2.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-1.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-4.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-3.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-5.png HTTP/1.1" 404 1938
+"GET /about/ HTTP/1.1" 200 21244
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/img/pratisthaCEO.jpg HTTP/1.1" 304 0
+"GET /static/core/img/about-hero.jpg HTTP/1.1" 404 1929
+"GET /static/core/img/logo-client-1.png HTTP/1.1" 404 1938
+"GET /static/core/img/team-cto.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/logo-client-3.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-2.png HTTP/1.1" 404 1938
+"GET /static/core/img/team-cpo.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/logo-client-4.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-5.png HTTP/1.1" 404 1938
+"GET /about/ HTTP/1.1" 200 21234
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/img/pratisthaCEO.jpg HTTP/1.1" 304 0
+"GET /static/core/img/about-hero.jpg HTTP/1.1" 404 1929
+"GET /static/core/img/team-cto.jpg HTTP/1.1" 404 1923
+"GET /static/core/img/logo-client-1.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-2.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-3.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-5.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-4.png HTTP/1.1" 404 1938
+"GET /static/core/img/sohan.jpg HTTP/1.1" 200 269402
+"GET /about/ HTTP/1.1" 200 21231
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/img/pratisthaCEO.jpg HTTP/1.1" 304 0
+"GET /static/core/img/sohan.jpg HTTP/1.1" 304 0
+"GET /static/core/img/logo-client-3.png HTTP/1.1" 404 1938
+"GET /static/core/img/about-hero.jpg HTTP/1.1" 404 1929
+"GET /static/core/img/logo-client-1.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-2.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-4.png HTTP/1.1" 404 1938
+"GET /static/core/img/sabita.jpg HTTP/1.1" 200 72147
+"GET /static/core/img/logo-client-5.png HTTP/1.1" 404 1938
+"GET /about/ HTTP/1.1" 200 21231
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/img/pratisthaCEO.jpg HTTP/1.1" 304 0
+"GET /static/core/img/sohan.jpg HTTP/1.1" 304 0
+"GET /static/core/img/about-hero.jpg HTTP/1.1" 404 1929
+"GET /static/core/img/logo-client-2.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-1.png HTTP/1.1" 404 1938
+"GET /static/core/img/sabita.jpg HTTP/1.1" 200 51800
+"GET /static/core/img/logo-client-3.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-4.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-5.png HTTP/1.1" 404 1938
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET /projects/ HTTP/1.1" 200 17474
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /about/ HTTP/1.1" 200 21231
+"GET /static/core/img/pratisthaCEO.jpg HTTP/1.1" 304 0
+"GET /static/core/img/sabita.jpg HTTP/1.1" 304 0
+"GET /static/core/img/sohan.jpg HTTP/1.1" 304 0
+"GET /static/core/img/about-hero.jpg HTTP/1.1" 404 1929
+"GET /static/core/img/logo-client-1.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-5.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-2.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-4.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-3.png HTTP/1.1" 404 1938
+"GET /about/ HTTP/1.1" 200 21214
+"GET /static/core/css/main.css HTTP/1.1" 200 6224
+"GET /static/core/img/pratisthaCEO.jpg HTTP/1.1" 304 0
+"GET /static/core/img/sohan.jpg HTTP/1.1" 304 0
+"GET /static/core/img/sabita.jpg HTTP/1.1" 304 0
+"GET /static/core/img/logo-client-2.png HTTP/1.1" 404 1938
+"GET /static/core/img/ HTTP/1.1" 404 1886
+"GET /static/core/img/logo-client-4.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-3.png HTTP/1.1" 404 1938
+"GET /static/core/img/logo-client-5.png HTTP/1.1" 404 1938
+"GET /static/core/img/about-hero.jpg HTTP/1.1" 404 1929
+"GET /about/ HTTP/1.1" 200 21221
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /static/core/img/pratisthaCEO.jpg HTTP/1.1" 304 0
+"GET /static/core/img/sabita.jpg HTTP/1.1" 304 0
+"GET /static/core/img/logoclient1.png HTTP/1.1" 200 11658
+"GET /static/core/img/sohan.jpg HTTP/1.1" 304 0
+"GET /static/core/img/about-hero.jpg HTTP/1.1" 404 1929
+"GET /static/core/img/logoclient3.jpg HTTP/1.1" 200 17519
+"GET /static/core/img/logoclient2.jpg HTTP/1.1" 200 47416
+"GET /static/core/img/logoclient5.jpg HTTP/1.1" 200 10753
+"GET /static/core/img/logoclient4.png HTTP/1.1" 200 55591
+"GET /about/ HTTP/1.1" 200 21221
+"GET /static/core/css/main.css HTTP/1.1" 200 6225
+"GET /static/core/img/about-hero.jpg HTTP/1.1" 404 1929
+"GET /static/core/img/logoclient1.png HTTP/1.1" 304 0
+"GET /static/core/img/logoclient2.jpg HTTP/1.1" 304 0
+"GET /static/core/img/logoclient5.jpg HTTP/1.1" 304 0
+"GET /static/core/img/logoclient4.png HTTP/1.1" 304 0
+"GET /static/core/img/logoclient3.jpg HTTP/1.1" 304 0
+"GET /about/ HTTP/1.1" 200 21225
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/img/sohan.jpg HTTP/1.1" 304 0
+"GET /static/core/img/sabita.jpg HTTP/1.1" 304 0
+"GET /static/core/img/pratisthaCEO.jpg HTTP/1.1" 304 0
+"GET /static/core/img/aisolutionteam.png HTTP/1.1" 200 799474
+"GET /static/core/img/logoclient3.jpg HTTP/1.1" 304 0
+"GET /static/core/img/logoclient2.jpg HTTP/1.1" 304 0
+"GET /static/core/img/logoclient4.png HTTP/1.1" 304 0
+"GET /static/core/img/logoclient5.jpg HTTP/1.1" 304 0
+"GET /static/core/img/logoclient1.png HTTP/1.1" 304 0
+"GET /contact/ HTTP/1.1" 200 21319
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/img/office-map.jpg HTTP/1.1" 404 1929
+"GET /contact/ HTTP/1.1" 200 21318
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/img/googlemap.png HTTP/1.1" 200 217677
+"GET /about/ HTTP/1.1" 200 21225
+"GET /static/core/img/aisolutionteam.png HTTP/1.1" 304 0
+"GET /static/core/img/pratisthaCEO.jpg HTTP/1.1" 304 0
+"GET /static/core/img/sabita.jpg HTTP/1.1" 304 0
+"GET /static/core/img/sohan.jpg HTTP/1.1" 304 0
+"GET /static/core/img/logoclient5.jpg HTTP/1.1" 304 0
+"GET /static/core/img/logoclient2.jpg HTTP/1.1" 304 0
+"GET /static/core/img/logoclient3.jpg HTTP/1.1" 304 0
+"GET /static/core/img/logoclient1.png HTTP/1.1" 304 0
+"GET /static/core/img/logoclient4.png HTTP/1.1" 304 0
+"GET /events/ HTTP/1.1" 200 34869
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/ HTTP/1.1" 200 17180
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 19213
+"GET /projects/ HTTP/1.1" 200 17474
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET /feedback/ HTTP/1.1" 200 19213
+"GET /projects/ HTTP/1.1" 200 17474
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/ HTTP/1.1" 200 17180
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 34869
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /about/ HTTP/1.1" 200 21225
+"GET /static/core/img/sabita.jpg HTTP/1.1" 304 0
+"GET /static/core/img/aisolutionteam.png HTTP/1.1" 304 0
+"GET /contact/ HTTP/1.1" 200 21318
+"GET /static/core/img/googlemap.png HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET /projects/ HTTP/1.1" 200 17474
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 19213
+"GET /articles/ HTTP/1.1" 200 17180
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 19213
+"POST /feedback/ HTTP/1.1" 200 19668
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"POST /feedback/ HTTP/1.1" 200 19455
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"POST /feedback/ HTTP/1.1" 200 19455
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 19213
+"GET /admin/ HTTP/1.1" 200 12817
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"GET /admin/core/feedback/ HTTP/1.1" 200 15185
+"GET /static/admin/js/core.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+"GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+"GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+"GET /static/admin/js/actions.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+"GET /static/admin/img/search.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+"GET /static/admin/js/filters.js HTTP/1.1" 304 0
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+"GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+"GET /admin/core/feedback/4/change/ HTTP/1.1" 200 13842
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+"GET /static/admin/css/forms.css HTTP/1.1" 304 0
+"GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+"POST /admin/core/feedback/4/change/ HTTP/1.1" 302 0
+"GET /admin/core/feedback/ HTTP/1.1" 200 15406
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/feedback/3/change/ HTTP/1.1" 200 13874
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/core/feedback/3/change/ HTTP/1.1" 302 0
+"GET /admin/core/feedback/ HTTP/1.1" 200 15419
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/feedback/2/change/ HTTP/1.1" 200 13918
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/core/feedback/2/change/ HTTP/1.1" 302 0
+"GET /admin/core/feedback/ HTTP/1.1" 200 15410
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/feedback/1/change/ HTTP/1.1" 200 13917
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/core/feedback/1/change/ HTTP/1.1" 302 0
+"GET /admin/core/feedback/ HTTP/1.1" 200 15413
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /feedback/ HTTP/1.1" 200 19213
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /feedback/ HTTP/1.1" 200 19213
+"GET /articles/ HTTP/1.1" 200 17180
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/the-future-of-ai-in-enterprise-2025-predictions/ HTTP/1.1" 200 14401
+"GET /events/ HTTP/1.1" 200 34869
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /about/ HTTP/1.1" 200 21225
+"GET /static/core/img/aisolutionteam.png HTTP/1.1" 304 0
+"GET /static/core/img/sabita.jpg HTTP/1.1" 304 0
+"GET /static/core/img/pratisthaCEO.jpg HTTP/1.1" 304 0
+"GET /static/core/img/sohan.jpg HTTP/1.1" 304 0
+"GET /contact/ HTTP/1.1" 200 21318
+"GET /static/core/img/googlemap.png HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /solutions/mlops-model-monitoring/ HTTP/1.1" 200 18453
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 5249
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /static/core/css/main.css HTTP/1.1" 200 6225
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4167
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/css/login.css HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 12940
+"GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /media/articles/covers/Screenshot_2025-08-03_180539.png HTTP/1.1" 304 0
+"GET /media/articles/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 5249
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16171
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET / HTTP/1.1" 200 16180
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /static/core/img/aisolutionteam.png HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 16178
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /static/core/img/aisolutions.jpeg HTTP/1.1" 200 128042
+"GET / HTTP/1.1" 200 16168
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /static/core/img/ai.jpg HTTP/1.1" 200 126917
+"GET /admin/ HTTP/1.1" 200 12940
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"GET /admin/core/project/ HTTP/1.1" 200 17107
+"GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+"GET /static/admin/js/core.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+"GET /static/admin/js/actions.js HTTP/1.1" 304 0
+"GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+"GET /static/admin/img/search.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/filters.js HTTP/1.1" 304 0
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+"GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+"GET /admin/core/project/1/change/ HTTP/1.1" 200 24388
+"GET /static/admin/css/forms.css HTTP/1.1" 304 0
+"GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+"GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+"GET /static/admin/js/collapse.js HTTP/1.1" 304 0
+"GET /static/admin/js/inlines.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+"GET /static/admin/js/SelectBox.js HTTP/1.1" 304 0
+"GET /static/admin/js/SelectFilter2.js HTTP/1.1" 304 0
+"GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+"GET /static/admin/img/tooltag-arrowright.svg HTTP/1.1" 304 0
+"GET /static/admin/img/inline-delete.svg HTTP/1.1" 304 0
+"GET /static/admin/img/selector-icons.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-unknown.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 304 0
+"POST /admin/core/project/1/change/ HTTP/1.1" 200 24627
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/core/project/1/change/ HTTP/1.1" 302 0
+"GET /admin/core/project/ HTTP/1.1" 200 17325
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET / HTTP/1.1" 200 16172
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/img/ai.jpg HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /media/projects/covers/1681980612057.jpeg HTTP/1.1" 200 217018
+"GET /projects/retail-analytics-platform/ HTTP/1.1" 200 14932
+"GET /media/projects/covers/1681980612057.jpeg HTTP/1.1" 304 0
+"GET /admin/core/project/1/change/ HTTP/1.1" 200 24704
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/core/project/1/change/ HTTP/1.1" 302 0
+"GET /admin/core/project/ HTTP/1.1" 200 17325
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET / HTTP/1.1" 200 16167
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /media/projects/covers/image002.webp HTTP/1.1" 200 18852
+"GET /projects/retail-analytics-platform/ HTTP/1.1" 200 14927
+"GET /media/projects/covers/image002.webp HTTP/1.1" 304 0
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 16167
+"GET /media/projects/covers/image002.webp HTTP/1.1" 304 0
+"GET /static/core/img/ai.jpg HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /projects/ HTTP/1.1" 200 17473
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /media/projects/covers/image002.webp HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET /solutions/?category=None&search=&complexity=&featured=&order=title HTTP/1.1" 200 26021
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET / HTTP/1.1" 200 16167
+"GET /static/core/img/ai.jpg HTTP/1.1" 304 0
+"GET /media/articles/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 304 0
+"GET /media/articles/covers/Screenshot_2025-08-03_180539.png HTTP/1.1" 304 0
+"GET /media/projects/covers/image002.webp HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 16167
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /static/core/img/ai.jpg HTTP/1.1" 304 0
+"GET /media/projects/covers/image002.webp HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/ HTTP/1.1" 200 17180
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET /projects/ HTTP/1.1" 200 17473
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET /solutions/computer-vision-pipelines/ HTTP/1.1" 200 18482
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/ HTTP/1.1" 200 17473
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /media/projects/covers/image002.webp HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/?tag=automation HTTP/1.1" 200 13379
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/?tag=computer-vision HTTP/1.1" 200 12020
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/?tag=data-analytics HTTP/1.1" 200 13409
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/?tag=finance HTTP/1.1" 200 12016
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/?tag=healthcare HTTP/1.1" 200 11986
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/?tag=healthcare HTTP/1.1" 200 11986
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/?tag=machine-learning HTTP/1.1" 200 13414
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/? HTTP/1.1" 200 17473
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/?tag=automation HTTP/1.1" 200 13379
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/? HTTP/1.1" 200 17473
+"GET /media/projects/covers/image002.webp HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/?tag=automation HTTP/1.1" 200 13379
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/healthcare-chatbot/ HTTP/1.1" 200 14681
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /projects/? HTTP/1.1" 200 17473
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/retail-analytics-platform/ HTTP/1.1" 200 14927
+"GET /admin/core/project/ HTTP/1.1" 200 17106
+"GET /articles/ HTTP/1.1" 200 17180
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /media/articles/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 304 0
+"GET /media/articles/covers/Screenshot_2025-08-03_180539.png HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/the-future-of-ai-in-enterprise-2025-predictions/ HTTP/1.1" 200 14401
+"GET /events/ HTTP/1.1" 200 34869
+"GET /media/events/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/ HTTP/1.1" 200 17473
+"GET /media/projects/covers/image002.webp HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 16167
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /media/projects/covers/image002.webp HTTP/1.1" 304 0
+"GET /static/core/img/ai.jpg HTTP/1.1" 304 0
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET /projects/ HTTP/1.1" 200 17473
+"GET /projects/financial-dashboard-platform/ HTTP/1.1" 200 14123
+"GET /articles/ HTTP/1.1" 200 17180
+"GET /events/ HTTP/1.1" 200 34869
+"GET /about/ HTTP/1.1" 200 21225
+"GET /static/core/img/aisolutionteam.png HTTP/1.1" 304 0
+"GET /static/core/img/pratisthaCEO.jpg HTTP/1.1" 304 0
+"GET /static/core/img/sabita.jpg HTTP/1.1" 304 0
+"GET /static/core/img/sohan.jpg HTTP/1.1" 304 0
+"GET /static/core/img/logoclient5.jpg HTTP/1.1" 304 0
+"GET /static/core/img/logoclient1.png HTTP/1.1" 304 0
+"GET /static/core/img/logoclient4.png HTTP/1.1" 304 0
+"GET /static/core/img/logoclient3.jpg HTTP/1.1" 304 0
+"GET /static/core/img/logoclient2.jpg HTTP/1.1" 304 0
+"GET /contact/ HTTP/1.1" 200 21318
+"GET /static/core/img/googlemap.png HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 16167
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET /projects/ HTTP/1.1" 200 17473
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET /feedback/ HTTP/1.1" 200 19213
+"GET /articles/ HTTP/1.1" 200 17180
+"GET /articles/ HTTP/1.1" 200 17180
+"GET /events/ HTTP/1.1" 200 34869
+"GET /about/ HTTP/1.1" 200 21225
+"GET /contact/ HTTP/1.1" 200 21318
+"GET /about/ HTTP/1.1" 200 21225
+"GET /contact/ HTTP/1.1" 200 21318
+"GET /projects/ HTTP/1.1" 200 17473
+"GET /projects/retail-analytics-platform/ HTTP/1.1" 200 14927
+"GET /projects/retail-analytics-platform/ HTTP/1.1" 200 14921
+"GET /projects/retail-analytics-platform/ HTTP/1.1" 200 14909
+"GET /projects/retail-analytics-platform/ HTTP/1.1" 200 14915
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 5249
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 5249
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 5249
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 5249
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 5249
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 16167
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 5249
+"GET /projects/ HTTP/1.1" 200 17473
+"GET /projects/retail-analytics-platform/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 200 16167
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET /projects/ HTTP/1.1" 200 17473
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 19213
+"GET /articles/ HTTP/1.1" 200 17180
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 34869
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /about/ HTTP/1.1" 200 21225
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET /feedback/ HTTP/1.1" 200 19213
+"GET /projects/ HTTP/1.1" 200 17473
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/ HTTP/1.1" 200 17180
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 34869
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 19213
+"GET /projects/ HTTP/1.1" 200 17473
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /projects/financial-dashboard-platform/ HTTP/1.1" 200 14115
+"GET /projects/retail-analytics-platform/ HTTP/1.1" 200 14915
+"GET /media/projects/covers/image002.webp HTTP/1.1" 304 0
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /feedback/ HTTP/1.1" 200 19213
+"GET /projects/ HTTP/1.1" 200 17473
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 19213
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 16167
+"GET /static/core/img/ai.jpg HTTP/1.1" 304 0
+"GET /media/articles/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 304 0
+"GET /media/articles/covers/Screenshot_2025-08-03_180539.png HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET /projects/ HTTP/1.1" 200 17473
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 19213
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 5249
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 5249
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 5249
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 5249
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 16167
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /media/projects/covers/image002.webp HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 5249
+"GET /projects/ HTTP/1.1" 200 17473
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 19213
+"GET /articles/ HTTP/1.1" 200 17180
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 34869
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /media/events/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/ HTTP/1.1" 200 17180
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /articles/data-privacy-in-ai-systems-a-comprehensive-guide/ HTTP/1.1" 200 11494
+"GET /articles/the-future-of-ai-in-enterprise-2025-predictions/ HTTP/1.1" 200 14401
+"GET /articles/the-future-of-ai-in-enterprise-2025-predictions/ HTTP/1.1" 200 14350
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 16167
+"GET /static/core/css/main.css HTTP/1.1" 200 6225
+"GET /static/core/js/main.js HTTP/1.1" 200 9435
+"GET /media/projects/covers/image002.webp HTTP/1.1" 200 18852
+"GET /static/core/img/ai.jpg HTTP/1.1" 200 126917
+"GET /media/articles/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 200 37240
+"GET /media/articles/covers/Screenshot_2025-08-03_180539.png HTTP/1.1" 200 41967
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 5249
+"GET /solutions/ HTTP/1.1" 200 36203
+"GET /projects/ HTTP/1.1" 200 17473
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /feedback/ HTTP/1.1" 200 19213
+"GET /articles/ HTTP/1.1" 200 17180
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/ HTTP/1.1" 200 34869
+"GET /media/events/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 200 37240
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/computer-vision-demo/ HTTP/1.1" 200 16290
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /events/machine-learning-workshop/ HTTP/1.1" 200 16316
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /contact/ HTTP/1.1" 200 21318
+"GET /static/core/img/googlemap.png HTTP/1.1" 200 217677
+"GET / HTTP/1.1" 200 16167
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /admin/login/ HTTP/1.1" 200 4154
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2682
+"GET /static/admin/css/base.css HTTP/1.1" 200 21544
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+"GET /static/admin/css/login.css HTTP/1.1" 200 958
+"GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+"GET /static/admin/css/responsive.css HTTP/1.1" 200 17905
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+"GET / HTTP/1.1" 200 16167
+"GET /static/core/css/main.css HTTP/1.1" 304 0
+"GET /static/core/js/main.js HTTP/1.1" 304 0
+"GET /media/projects/covers/image002.webp HTTP/1.1" 304 0
+"GET /static/core/img/ai.jpg HTTP/1.1" 304 0
+"GET /media/articles/covers/2025-AI-Trends-Predictions.jpg.jpeg HTTP/1.1" 304 0
+"GET /media/articles/covers/Screenshot_2025-08-03_180539.png HTTP/1.1" 304 0
+"GET /static/core/img/placeholder-16x9.jpg HTTP/1.1" 404 1947
+"GET /admin/login/ HTTP/1.1" 200 4154
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/css/login.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+C:\Users\panth\OneDrive\Desktop\aisolution\core\urls.py changed, reloading.
+Watching for file changes with StatReloader

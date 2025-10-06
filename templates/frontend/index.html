@@ -1,0 +1,170 @@
+<!-- templates/index.html -->
+{% extends "base.html" %} {% load static %} {% block title %}AI-Solutions -
+Intelligent Software Development{% endblock %} {% block content %}
+<!-- Hero Section -->
+<section class="hero-section bg-light py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h1 class="display-4 fw-bold mb-4">
+          We build AI-powered software that grows with your business
+        </h1>
+        <p class="lead text-muted mb-4">
+          Transform your ideas into intelligent solutions. From machine learning
+          to custom development, we deliver technology that adapts and evolves
+          with your needs.
+        </p>
+        <div class="d-flex gap-3">
+          <a href="{% url 'core:solutions' %}" class="btn btn-brand btn-lg">
+            <i class="bi bi-lightbulb me-2"></i>Explore Solutions
+          </a>
+          <a href="{% url 'core:contact' %}" class="btn btn-outline-dark btn-lg">
+            <i class="bi bi-chat-dots me-2"></i>Get Started
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <img src="{% static 'img/ai.png' %}" alt="AI-powered software development" class="img-fluid rounded shadow"
+          style="width: 100%; height: auto; object-fit: cover" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="py-5">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <div class="badge-soft bg-success text-white mb-3 d-inline-flex align-items-center"> <i
+            class="bi bi-shield-check me-2"></i>
+          Secure & Reliable
+        </div>
+        <h5>HTTPS Enabled</h5>
+        <p class="text-muted">
+          All communications encrypted with industry-standard security
+          protocols.
+        </p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="badge-soft bg-primary text-white mb-3 d-inline-flex align-items-center">
+          <i class="bi bi-phone me-2"></i>
+          Mobile Ready
+        </div>
+        <h5>Responsive Design</h5>
+        <p class="text-muted">
+          Optimized for all devices, from smartphones to desktop computers.
+        </p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="badge-soft bg-warning text-white mb-3 d-inline-flex align-items-center">
+          <i class="bi bi-lightning me-2"></i>
+          High Performance
+        </div>
+        <h5>Lightning Fast</h5>
+        <p class="text-muted">
+          Optimized for speed with modern development practices and caching.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Latest Projects -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-12 text-center">
+        <h2>Recent Projects</h2>
+        <p class="text-muted">Discover our latest AI-powered solutions</p>
+      </div>
+    </div>
+    <div class="row">
+      {% for project in latest_projects %}
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 card-hover">
+          {% if project.cover_image %}
+          <img src="{{ project.cover_image.url }}" class="card-img-top" alt="{{ project.title }} cover"
+            loading="lazy" />
+          {% else %}
+          <img src="{% static 'core/img/placeholder-16x9.jpg' %}" class="card-img-top" alt="{{ project.title }} cover"
+            loading="lazy" />
+          {% endif %}
+          <div class="card-body">
+            <h5 class="card-title">{{ project.title }}</h5>
+            <p class="card-text text-muted">
+              {{ project.summary|truncatewords:20 }}
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small class="text-muted">{{ project.completed_on|date:"Y-m-d" }}</small>
+              <a href="{% url 'core:project_detail' project.slug %}" class="btn btn-sm btn-outline-primary">View
+                Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% empty %}
+      <div class="col-12 text-center">
+        <p class="text-muted">No projects available yet.</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% if latest_projects %}
+    <div class="text-center">
+      <a href="{% url 'core:projects' %}" class="btn btn-outline-dark">View All Projects</a>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<!-- Latest Articles -->
+<section class="py-5">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-12 text-center">
+        <h2>Latest Articles</h2>
+        <p class="text-muted">
+          Stay updated with our insights and industry knowledge
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      {% for article in latest_articles %}
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 card-hover">
+          {% if article.cover_image %}
+          <img src="{{ article.cover_image.url }}" class="card-img-top" alt="{{ article.title }} cover"
+            loading="lazy" />
+          {% else %}
+          <img src="{% static 'core/img/placeholder-16x9.jpg' %}" class="card-img-top" alt="{{ article.title }} cover"
+            loading="lazy" />
+          {% endif %}
+          <div class="card-body">
+            <h5 class="card-title">{{ article.title }}</h5>
+            <p class="card-text text-muted">
+              {{ article.excerpt|truncatewords:20 }}
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small class="text-muted">{{ article.published_at|date:"Y-m-d" }}</small>
+              <a href="{% url 'core:article_detail' article.slug %}" class="btn btn-sm btn-outline-primary">
+                Read More
+              </a>
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      {% empty %}
+      <div class="col-12 text-center">
+        <p class="text-muted">No articles available yet.</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% if latest_articles %}
+    <div class="text-center">
+      <a href="{% url 'core:articles' %}" class="btn btn-outline-dark">View All Articles</a>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

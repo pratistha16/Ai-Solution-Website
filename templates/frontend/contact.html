@@ -1,0 +1,533 @@
+{% extends 'base.html' %} {% load static %} {% block title %} Contact Us -
+{{settings.site_name }}{% endblock %} {% block content %}
+<!-- Page Header -->
+<section class="bg-primary text-white py-5" style="margin-top: 80px">
+  <div class="container py-4">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h1 class="display-4 fw-bold mb-3">Contact Us</h1>
+        <p class="lead">
+          Get in touch with our team to discuss your AI solution needs
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Form Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+      <!-- Contact Form -->
+      <div class="col-lg-8">
+        <div class="card shadow-sm border-0">
+          <div class="card-body p-4">
+            <h3 class="fw-bold mb-4">Send us a Message</h3>
+
+            <form method="POST" enctype="multipart/form-data" id="contactForm">
+              {% csrf_token %}
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="{{ form.name.id_for_label }}" class="form-label"
+                    >Full Name *</label
+                  >
+                  {{ form.name }} {% if form.name.errors %}
+                  <div class="text-danger small">{{ form.name.errors.0 }}</div>
+                  {% endif %}
+                </div>
+                <div class="col-md-6">
+                  <label for="{{ form.email.id_for_label }}" class="form-label"
+                    >Email Address *</label
+                  >
+                  {{ form.email }} {% if form.email.errors %}
+                  <div class="text-danger small">{{ form.email.errors.0 }}</div>
+                  {% endif %}
+                </div>
+                <div class="col-md-6">
+                  <label for="{{ form.phone.id_for_label }}" class="form-label"
+                    >Phone Number</label
+                  >
+                  {{ form.phone }} {% if form.phone.errors %}
+                  <div class="text-danger small">{{ form.phone.errors.0 }}</div>
+                  {% endif %}
+                </div>
+                <div class="col-md-6">
+                  <label
+                    for="{{ form.company.id_for_label }}"
+                    class="form-label"
+                    >Company/Organization</label
+                  >
+                  {{ form.company }} {% if form.company.errors %}
+                  <div class="text-danger small">
+                    {{ form.company.errors.0 }}
+                  </div>
+                  {% endif %}
+                </div>
+                <div class="col-md-6">
+                  <label
+                    for="{{ form.country.id_for_label }}"
+                    class="form-label"
+                    >Country</label
+                  >
+                  {{ form.country }} {% if form.country.errors %}
+                  <div class="text-danger small">
+                    {{ form.country.errors.0 }}
+                  </div>
+                  {% endif %}
+                </div>
+                <div class="col-md-6">
+                  <label
+                    for="{{ form.job_title.id_for_label }}"
+                    class="form-label"
+                    >Job Title</label
+                  >
+                  {{ form.job_title }} {% if form.job_title.errors %}
+                  <div class="text-danger small">
+                    {{ form.job_title.errors.0 }}
+                  </div>
+                  {% endif %}
+                </div>
+                <div class="col-12">
+                  <label
+                    for="{{ form.message.id_for_label }}"
+                    class="form-label"
+                    >Message *</label
+                  >
+                  {{ form.message }} {% if form.message.errors %}
+                  <div class="text-danger small">
+                    {{ form.message.errors.0 }}
+                  </div>
+                  {% endif %}
+                </div>
+                <div class="col-12">
+                  <label
+                    for="{{ form.attachment.id_for_label }}"
+                    class="form-label"
+                    >Attachment (Optional)</label
+                  >
+                  {{ form.attachment }} {% if form.attachment.errors %}
+                  <div class="text-danger small">
+                    {{ form.attachment.errors.0 }}
+                  </div>
+                  {% endif %}
+                  <div class="form-text">
+                    Supported formats: PDF, DOC, DOCX, TXT (Max: 10MB)
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
+                <button type="reset" class="btn btn-outline-secondary">
+                  Clear Form
+                </button>
+                <button type="submit" class="btn btn-primary">
+                  <i class="bi bi-send me-1"></i>Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="col-lg-4">
+        <div class="card bg-primary text-white border-0">
+          <div class="card-body p-4">
+            <h4 class="fw-bold mb-4">Get in Touch</h4>
+
+            <div class="d-flex align-items-start mb-3">
+              <i class="bi bi-envelope-fill me-3 mt-1"></i>
+              <div>
+                <h6 class="mb-1">Email</h6>
+                <a
+                  href="mailto:{{ settings.contact_email }}"
+                  class="text-white text-decoration-none"
+                >
+                  {{ settings.contact_email }}
+                </a>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start mb-3">
+              <i class="bi bi-telephone-fill me-3 mt-1"></i>
+              <div>
+                <h6 class="mb-1">Phone</h6>
+                <a
+                  href="tel:{{ settings.contact_phone }}"
+                  class="text-white text-decoration-none"
+                >
+                  {{ settings.contact_phone }}
+                </a>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start mb-4">
+              <i class="bi bi-geo-alt-fill me-3 mt-1"></i>
+              <div>
+                <h6 class="mb-1">Address</h6>
+                <p class="mb-0">{{ settings.address }}</p>
+              </div>
+            </div>
+
+            <hr class="my-4 border-white border-opacity-25" />
+
+            <h6 class="mb-3">Follow Us</h6>
+            <div class="d-flex gap-3">
+              {% if settings.social_facebook %}
+              <a href="{{ settings.social_facebook }}" class="text-white">
+                <i class="bi bi-facebook fs-5"></i>
+              </a>
+              {% endif %} {% if settings.social_twitter %}
+              <a href="{{ settings.social_twitter }}" class="text-white">
+                <i class="bi bi-twitter fs-5"></i>
+              </a>
+              {% endif %} {% if settings.social_linkedin %}
+              <a href="{{ settings.social_linkedin }}" class="text-white">
+                <i class="bi bi-linkedin fs-5"></i>
+              </a>
+              {% endif %} {% if settings.social_instagram %}
+              <a href="{{ settings.social_instagram }}" class="text-white">
+                <i class="bi bi-instagram fs-5"></i>
+              </a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="card border-0 shadow-sm mt-4">
+          <div class="card-body p-4">
+            <h5 class="fw-bold mb-3">Quick Actions</h5>
+
+            <div class="d-grid gap-2">
+              <button class="btn btn-outline-primary" onclick="scheduleDemo()">
+                <i class="bi bi-calendar-event me-2"></i>Schedule a Demo
+              </button>
+              <button class="btn btn-outline-success" onclick="requestQuote()">
+                <i class="bi bi-calculator me-2"></i>Request Quote
+              </button>
+              <a href="{% url 'solutions' %}" class="btn btn-outline-info">
+                <i class="bi bi-lightbulb me-2"></i>View Solutions
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feedback Section -->
+<div class="card border-0 shadow-sm mt-4">
+  <div class="card-body p-4">
+    <h5 class="fw-bold mb-3">Share Your Feedback</h5>
+    <p class="text-muted small mb-3">
+      Help us improve by sharing your experience
+    </p>
+
+    <form id="feedbackForm" method="post" action="{% url 'submit_feedback' %}">
+      {% csrf_token %}
+
+      <!-- Rating -->
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Rating</label>
+        <div class="d-flex gap-1 mb-2">
+          <i class="bi bi-star feedback-star" data-rating="1"></i>
+          <i class="bi bi-star feedback-star" data-rating="2"></i>
+          <i class="bi bi-star feedback-star" data-rating="3"></i>
+          <i class="bi bi-star feedback-star" data-rating="4"></i>
+          <i class="bi bi-star feedback-star" data-rating="5"></i>
+        </div>
+        <input type="hidden" id="feedbackRating" name="rating" value="5"/>
+      </div>
+
+      <!-- Name -->
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control form-control-sm"
+          id="feedbackName"
+          name="name"
+          placeholder="Your Name"
+          required
+        />
+      </div>
+
+      <!-- Email -->
+      <div class="mb-3">
+        <input
+          type="email"
+          class="form-control form-control-sm"
+          id="feedbackEmail"
+          name="email"
+          placeholder="Your Email"
+          required
+        />
+      </div>
+
+      <!-- Comment -->
+      <div class="mb-3">
+        <textarea
+          class="form-control form-control-sm"
+          id="feedbackComment"
+          name="comment"
+          rows="3"
+          placeholder="Your feedback..."
+          required
+        ></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-sm w-100">
+        <i class="bi bi-send me-1"></i>Submit Feedback
+      </button>
+
+      <div id="feedbackMessage" class="mt-2 text-success"></div>
+    </form>
+  </div>
+</div>
+
+<!-- Optional JavaScript for Star Rating -->
+<script>
+  document.querySelectorAll('.feedback-star').forEach(star => {
+    star.addEventListener('click', function() {
+      const rating = this.dataset.rating;
+      document.getElementById('feedbackRating').value = rating;
+      document.querySelectorAll('.feedback-star').forEach(s => {
+        s.classList.toggle('bi-star-fill', s.dataset.rating <= rating);
+        s.classList.toggle('text-warning', s.dataset.rating <= rating);
+        s.classList.toggle('bi-star', s.dataset.rating > rating);
+        s.classList.toggle('text-muted', s.dataset.rating > rating);
+      });
+    });
+  });
+</script>
+
+
+<!-- FAQ Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold mb-3">Frequently Asked Questions</h2>
+      <p class="lead">Quick answers to common questions</p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq1">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse1"
+              >
+                How long does it take to implement an AI solution?
+              </button>
+            </h2>
+            <div
+              id="collapse1"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Implementation time varies depending on the complexity of the
+                solution. Simple integrations can take 2-4 weeks, while custom
+                AI models may require 3-6 months. We provide detailed timelines
+                during our initial consultation.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq2">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse2"
+              >
+                Do you provide ongoing support after implementation?
+              </button>
+            </h2>
+            <div
+              id="collapse2"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Yes, we offer comprehensive support packages including
+                monitoring, maintenance, updates, and training. Our support team
+                is available 24/7 for critical issues.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq3">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse3"
+              >
+                What industries do you specialize in?
+              </button>
+            </h2>
+            <div
+              id="collapse3"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                We specialize in Healthcare, Finance, and Education sectors, but
+                our solutions can be adapted for various industries including
+                retail, manufacturing, and technology.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq4">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse4"
+              >
+                How do you ensure data security and privacy?
+              </button>
+            </h2>
+            <div
+              id="collapse4"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                We follow industry best practices including encryption, secure
+                data transfer, compliance with GDPR/HIPAA regulations, and
+                regular security audits. Your data privacy is our top priority.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %} {% block extra_css %}
+<style>
+  .feedback-star {
+    font-size: 1.2rem;
+    color: #ffc107;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+
+  .feedback-star:hover {
+    color: #ffb300;
+  }
+
+  .feedback-star.filled {
+    color: #ffc107;
+  }
+
+  .feedback-star.empty {
+    color: #dee2e6;
+  }
+</style>
+{% endblock %} {% block extra_js %}
+<script>
+  // Feedback star rating
+  document.querySelectorAll(".feedback-star").forEach((star) => {
+    star.addEventListener("click", function () {
+      const rating = this.dataset.rating;
+      document.getElementById("feedbackRating").value = rating;
+
+      // Update star display
+      document.querySelectorAll(".feedback-star").forEach((s, index) => {
+        if (index < rating) {
+          s.classList.remove("bi-star");
+          s.classList.add("bi-star-fill", "filled");
+          s.classList.remove("empty");
+        } else {
+          s.classList.remove("bi-star-fill", "filled");
+          s.classList.add("bi-star", "empty");
+        }
+      });
+    });
+  });
+
+  // Initialize stars with 5-star rating
+  document.querySelectorAll(".feedback-star").forEach((star) => {
+    star.classList.remove("bi-star");
+    star.classList.add("bi-star-fill", "filled");
+  });
+
+  // Feedback form submission
+  document
+    .getElementById("feedbackForm")
+    .addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const formData = new FormData();
+      formData.append("name", document.getElementById("feedbackName").value);
+      formData.append("email", document.getElementById("feedbackEmail").value);
+      formData.append(
+        "rating",
+        document.getElementById("feedbackRating").value
+      );
+      formData.append(
+        "comment",
+        document.getElementById("feedbackComment").value
+      );
+
+      fetch('{% url "submit_feedback" %}', {
+        method: "POST",
+        body: formData,
+        headers: {
+          "X-CSRFToken": "{{ csrf_token }}",
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          const messageDiv = document.getElementById("feedbackMessage");
+          if (data.success) {
+            messageDiv.innerHTML = `<div class="alert alert-success alert-sm">${data.message}</div>`;
+            this.reset();
+            // Reset stars to 5
+            document.querySelectorAll(".feedback-star").forEach((star) => {
+              star.classList.remove("bi-star");
+              star.classList.add("bi-star-fill", "filled");
+            });
+            document.getElementById("feedbackRating").value = "5";
+          } else {
+            messageDiv.innerHTML = `<div class="alert alert-danger alert-sm">Error submitting feedback. Please try again.</div>`;
+          }
+
+          setTimeout(() => {
+            messageDiv.innerHTML = "";
+          }, 5000);
+        })
+        .catch((error) => {
+          document.getElementById(
+            "feedbackMessage"
+          ).innerHTML = `<div class="alert alert-danger alert-sm">An error occurred. Please try again.</div>`;
+        });
+    });
+
+  function scheduleDemo() {
+    // Pre-fill the contact form for demo request
+    document.getElementById("{{ form.message.id_for_label }}").value =
+      "I would like to schedule a demo of your AI solutions. Please contact me to arrange a suitable time.";
+    document
+      .getElementById("{{ form.message.id_for_label }}")
+      .scrollIntoView({ behavior: "smooth" });
+  }
+
+  function requestQuote() {
+    // Pre-fill the contact form for quote request
+    document.getElementById("{{ form.message.id_for_label }}").value =
+      "I am interested in getting a quote for your AI solutions. Please provide pricing information based on my requirements.";
+    document
+      .getElementById("{{ form.message.id_for_label }}")
+      .scrollIntoView({ behavior: "smooth" });
+  }
+</script>
+{% endblock %}
