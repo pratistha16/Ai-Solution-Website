@@ -8,8 +8,7 @@ This is a Django project for an AI solutions company. It includes features for m
 - Event management and registration
 - Gallery for event images
 - Solutions & services display
-- Blog & article management
-- Newsletter subscription and management
+- Article management
 - Team management
 
 Additionally, a **chatbot** can interact with the website's features using the **API**.
